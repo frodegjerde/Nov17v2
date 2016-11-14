@@ -71,7 +71,6 @@
    </list>
    <value n="defaultPackage" v="com.pocapp.enoro.model"/>
    <value n="jbo.JpxName" v="com.pocapp.enoro.model.Model"/>
-   <value n="jbo.NoAttrEnumClasses" v="true"/>
    <value n="JboProject" v="true"/>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
@@ -109,45 +108,6 @@
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="POCApp_Model">
-            <value n="adflib-connectionDetails" v="true"/>
-            <hash n="archiveOptions">
-               <value n="hasManifest" v="true"/>
-            </hash>
-            <hash n="fileGroups">
-               <list n="groups">
-                  <hash>
-                     <list n="contributors">
-                        <hash>
-                           <value n="type" v="2"/>
-                        </hash>
-                        <hash>
-                           <value n="type" v="5"/>
-                        </hash>
-                     </list>
-                     <value n="displayName" v="Project Output"/>
-                     <hash n="filters">
-                        <list n="rules">
-                           <hash>
-                              <value n="pattern" v="WEB-INF/classes/**"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**"/>
-                              <value n="type" v="0"/>
-                           </hash>
-                        </list>
-                     </hash>
-                     <value n="internalName" v="project-output"/>
-                     <value n="type" v="1"/>
-                  </hash>
-               </list>
-            </hash>
-            <url n="jarURL" path="deploy/POCApp_Model.jar"/>
-            <hash n="LibraryDependencies"/>
-            <value n="profileClass" v="oracle.adfdt.common.deploy.impl.AdfLibraryProfile"/>
-            <value n="profileName" v="POCApp_Model"/>
-         </hash>
          <hash n="POCApp_Model_adflib">
             <value n="adflib-connectionDetails" v="true"/>
             <value n="adflib-nonReusablesError" v="false"/>
@@ -191,7 +151,6 @@
       </hash>
       <list n="profileList">
          <string v="POCApp_Model_adflib"/>
-         <string v="POCApp_Model"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
