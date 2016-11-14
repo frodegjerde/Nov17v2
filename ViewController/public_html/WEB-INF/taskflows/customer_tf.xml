@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="customer_tf">
+    <default-activity>customer</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="customer">
+      <page>/fragments/tf_customer/customer.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

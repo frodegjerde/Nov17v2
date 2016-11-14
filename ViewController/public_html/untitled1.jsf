@@ -4,8 +4,17 @@
     <af:document title="untitled1.jsf" id="d1">
         <af:form id="f1">
             <af:pageTemplate viewId="/mainTemplate.jsf" id="pt1">
-                <f:facet name="facetLeftNavigation"/>
-                <f:facet name="facetCentral"/>
+                <f:facet name="facetLeftNavigation">
+                    <af:panelGroupLayout id="pgl3" layout="vertical">
+                        <af:link text="Customer" action="#{viewScope.navigationBean.customer_tf}" id="l1"/>
+                        <af:link text="Customer Wizard" action="#{viewScope.navigationBean.customerWizard_tf}"
+                                 id="l2"/>
+                        <af:link text="Parameter" action="#{viewScope.navigationBean.parameter_ts}" id="l3"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="facetCentral">
+                    <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" partialTriggers="::l1 ::l2 ::l3"/>
+                </f:facet>
                 <f:facet name="facetRightContextualActions"/>
                 <f:facet name="facetHeader">
                     <af:panelGroupLayout id="pgl1" layout="horizontal">
