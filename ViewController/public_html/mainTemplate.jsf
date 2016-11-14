@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>mainTemplate</afc:display-name>
+            <afc:facet>
+                <afc:facet-name>facetLeftNavigation</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>facetCentral</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>facetRightContextualActions</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>facetHeader</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>facetFooter</afc:facet-name>
+            </afc:facet>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelGroupLayout id="pt_pgl1" layout="vertical">
+        <af:panelSplitter orientation="vertical" splitterPosition="50" id="pt_ps1">
+            <f:facet name="first">
+                <af:facetRef facetName="facetHeader"/>
+            </f:facet>
+            <f:facet name="second">
+                <af:panelSplitter orientation="horizontal" splitterPosition="100" id="pt_ps2">
+                    <f:facet name="first">
+                        <af:facetRef facetName="facetLeftNavigation"/>
+                    </f:facet>
+                    <f:facet name="second">
+                        <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true"
+                                          id="pt_ps3">
+                            <f:facet name="first">
+                                <af:panelGroupLayout id="pt_pgl2" layout="vertical">
+                                    <af:facetRef facetName="facetCentral"/>
+                                </af:panelGroupLayout>
+                            </f:facet>
+                            <f:facet name="second">
+                                <af:facetRef facetName="facetRightContextualActions"/>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </f:facet>
+                </af:panelSplitter>
+            </f:facet>
+        </af:panelSplitter>
+        <af:facetRef facetName="facetFooter"/>
+    </af:panelGroupLayout>
+</af:pageTemplateDef>

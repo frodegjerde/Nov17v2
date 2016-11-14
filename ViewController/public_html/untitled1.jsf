@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled1.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/mainTemplate.jsf" id="pt1">
+                <f:facet name="facetLeftNavigation"/>
+                <f:facet name="facetCentral"/>
+                <f:facet name="facetRightContextualActions"/>
+                <f:facet name="facetHeader">
+                    <af:panelGroupLayout id="pgl1" layout="horizontal">
+                        <af:image source="resources/images/logo-enoro.png" id="i1"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="facetFooter">
+                    <af:panelGroupLayout id="pgl2" halign="center">
+                        <af:outputText value="Copyright 2016" id="ot1"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>
