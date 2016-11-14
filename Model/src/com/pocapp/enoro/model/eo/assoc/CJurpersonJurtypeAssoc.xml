@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CJurpersonJurtypeAssoc"
+  Version="12.2.1.16.48"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="VJurtype"
+    Cardinality="1"
+    Source="true"
+    Owner="com.pocapp.enoro.model.eo.VJurtype">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="VJurtype"/>
+      <Attr Name="_foreignKey" Value="com.pocapp.enoro.model.eo.VJurtype.PkVJurtype"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VJurtype.Jurtype"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="VJurperson"
+    Cardinality="-1"
+    Owner="com.pocapp.enoro.model.eo.VJurperson">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="VJurperson"/>
+      <Attr Name="_foreignKey" Value="com.pocapp.enoro.model.eo.VJurperson.CJurpersonJurtype"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VJurperson.Jurtype"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

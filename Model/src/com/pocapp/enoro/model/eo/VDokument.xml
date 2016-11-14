@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VDokument"
+  Version="12.2.1.16.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ADF.V_DOKUMENT"
+  AliasName="VDokument"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Dokumentnr"
+    IsNotNull="true"
+    Precision="9"
+    Scale="0"
+    ColumnName="DOKUMENTNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_DOKUMENT"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Jurpersonid"
+    Precision="9"
+    Scale="0"
+    ColumnName="JURPERSONID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_DOKUMENT"/>
+  <Attribute
+    Name="Dockmedsti"
+    Precision="254"
+    ColumnName="DOCKMEDSTI"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_DOKUMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="254"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Dokkomentar"
+    Precision="254"
+    ColumnName="DOKKOMENTAR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_DOKUMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="254"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Loggdatotidny"
+    ColumnName="LOGGDATOTIDNY"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="ADF.V_DOKUMENT"/>
+  <Attribute
+    Name="Dokument"
+    IsQueriable="false"
+    ColumnName="DOKUMENT"
+    SQLType="BLOB"
+    Type="oracle.jbo.domain.BlobDomain"
+    ColumnType="BLOB"
+    TableName="ADF.V_DOKUMENT"/>
+  <Attribute
+    Name="DokumentMimetype"
+    Precision="254"
+    ColumnName="DOKUMENT_MIMETYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_DOKUMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="254"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Dummyfield"
+    Precision="4"
+    ColumnName="DUMMYFIELD"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="ADF.V_DOKUMENT"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="VJurperson"
+    Association="com.pocapp.enoro.model.eo.CDokumentJurpersonidAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CDokumentJurpersonidAssoc.VJurperson"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CDokumentJurpersonidAssoc.VDokument"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkVDokument"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_V_DOKUMENT"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VDokument.Dokumentnr"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CDokumentJurpersonid">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_V_LEGALENTITYX"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="C_DOKUMENT_JURPERSONID"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VDokument.Jurpersonid"/>
+    </AttrArray>
+  </Key>
+</Entity>

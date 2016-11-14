@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VKontrakt"
+  Version="12.2.1.16.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ADF.V_KONTRAKT"
+  AliasName="VKontrakt"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Kundenr"
+    IsNotNull="true"
+    Precision="9"
+    Scale="0"
+    ColumnName="KUNDENR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_KONTRAKT"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Kontraktnr"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="KONTRAKTNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_KONTRAKT"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Maalepktnr"
+    Precision="9"
+    Scale="0"
+    ColumnName="MAALEPKTNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_KONTRAKT"/>
+  <Attribute
+    Name="Resknr"
+    Precision="4"
+    Scale="0"
+    ColumnName="RESKNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_KONTRAKT"/>
+  <Attribute
+    Name="Valstatus"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="VALSTATUS"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="ADF.V_KONTRAKT"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Kontrgrnr"
+    IsNotNull="true"
+    Precision="9"
+    Scale="0"
+    ColumnName="KONTRGRNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_KONTRAKT"/>
+  <Attribute
+    Name="Avrpuljenr"
+    Precision="3"
+    Scale="0"
+    ColumnName="AVRPULJENR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_KONTRAKT"/>
+  <Attribute
+    Name="Kontrretur"
+    ColumnName="KONTRRETUR"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="ADF.V_KONTRAKT"/>
+  <Attribute
+    Name="Kontroppseiingdato"
+    ColumnName="KONTROPPSEIINGDATO"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="ADF.V_KONTRAKT"/>
+  <AccessorAttribute
+    Name="VAvrpulje"
+    Association="com.pocapp.enoro.model.eo.CKontraktAvrpuljeAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CKontraktAvrpuljeAssoc.VAvrpulje"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CKontraktAvrpuljeAssoc.VKontrakt"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="VJurperson"
+    Association="com.pocapp.enoro.model.eo.CKontraktKundenrAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CKontraktKundenrAssoc.VJurperson"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CKontraktKundenrAssoc.VKontrakt"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="VKontraktgruppe"
+    Association="com.pocapp.enoro.model.eo.CKontraktKontraktgruppeAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CKontraktKontraktgruppeAssoc.VKontraktgruppe"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CKontraktKontraktgruppeAssoc.VKontrakt"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="VKontraktstatus"
+    Association="com.pocapp.enoro.model.eo.CKontraktKontraktstatusAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CKontraktKontraktstatusAssoc.VKontraktstatus"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CKontraktKontraktstatusAssoc.VKontrakt"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkVKontrakt"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_V_KONTRAKT"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VKontrakt.Kundenr"/>
+      <Item Value="com.pocapp.enoro.model.eo.VKontrakt.Kontraktnr"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CKontraktAvrpulje">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_V_AVRPULJE"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="C_KONTRAKT_AVRPULJE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VKontrakt.Avrpuljenr"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CKontraktKontraktgruppe">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_V_KONTRAKTGRUPPE"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="C_KONTRAKT_KONTRAKTGRUPPE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VKontrakt.Kontrgrnr"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CKontraktKontraktstatus">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_V_KONTRAKTSTATUS"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="C_KONTRAKT_KONTRAKTSTATUS"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VKontrakt.Valstatus"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CKontraktKundenr">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_V_LEGALENTITYX"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="C_KONTRAKT_KUNDENR"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VKontrakt.Kundenr"/>
+    </AttrArray>
+  </Key>
+</Entity>

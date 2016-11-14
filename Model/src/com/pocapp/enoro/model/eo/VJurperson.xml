@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VJurperson"
+  Version="12.2.1.16.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ADF.V_JURPERSON"
+  AliasName="VJurperson"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Jurpersonid"
+    IsNotNull="true"
+    Precision="9"
+    Scale="0"
+    ColumnName="JURPERSONID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_JURPERSON"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Jurtype"
+    Precision="3"
+    Scale="0"
+    ColumnName="JURTYPE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_JURPERSON"/>
+  <Attribute
+    Name="Fornamn"
+    Precision="60"
+    ColumnName="FORNAMN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Etternamn"
+    Precision="60"
+    ColumnName="ETTERNAMN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Foodseldato"
+    ColumnName="FOODSELDATO"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="ADF.V_JURPERSON"/>
+  <Attribute
+    Name="Nationalidno"
+    Precision="11"
+    ColumnName="NATIONALIDNO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Foretaksnr"
+    Precision="254"
+    ColumnName="FORETAKSNR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="254"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="VDokument"
+    Association="com.pocapp.enoro.model.eo.CDokumentJurpersonidAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CDokumentJurpersonidAssoc.VDokument"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CDokumentJurpersonidAssoc.VJurperson"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="VJurpersonAdresse"
+    Association="com.pocapp.enoro.model.eo.CJurpersonAdresseJpidAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CJurpersonAdresseJpidAssoc.VJurpersonAdresse"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CJurpersonAdresseJpidAssoc.VJurperson"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="VJurpersonConsumption"
+    Association="com.pocapp.enoro.model.eo.CJurpersonConsumptionJpidAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CJurpersonConsumptionJpidAssoc.VJurpersonConsumption"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CJurpersonConsumptionJpidAssoc.VJurperson"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="VJurpersonDialogue"
+    Association="com.pocapp.enoro.model.eo.CJurpersonDialogueJpidAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CJurpersonDialogueJpidAssoc.VJurpersonDialogue"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CJurpersonDialogueJpidAssoc.VJurperson"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="VJurpersonFinancial"
+    Association="com.pocapp.enoro.model.eo.CJurpersonFinancialJpidAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CJurpersonFinancialJpidAssoc.VJurpersonFinancial"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CJurpersonFinancialJpidAssoc.VJurperson"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="VJurpersonKontraktCnt"
+    Association="com.pocapp.enoro.model.eo.CJurpersonKontraktCntAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CJurpersonKontraktCntAssoc.VJurpersonKontraktCnt"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CJurpersonKontraktCntAssoc.VJurperson"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="VJurtype"
+    Association="com.pocapp.enoro.model.eo.CJurpersonJurtypeAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CJurpersonJurtypeAssoc.VJurtype"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CJurpersonJurtypeAssoc.VJurperson"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="VKontrakt"
+    Association="com.pocapp.enoro.model.eo.CKontraktKundenrAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CKontraktKundenrAssoc.VKontrakt"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CKontraktKundenrAssoc.VJurperson"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="VReskontro"
+    Association="com.pocapp.enoro.model.eo.CReskontroAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CReskontroAssoc.VReskontro"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CReskontroAssoc.VJurperson"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkVLegalentityx"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_V_LEGALENTITYX"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VJurperson.Jurpersonid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CJurpersonJurtype">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_V_JURTYPE"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="C_JURPERSON_JURTYPE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VJurperson.Jurtype"/>
+    </AttrArray>
+  </Key>
+</Entity>

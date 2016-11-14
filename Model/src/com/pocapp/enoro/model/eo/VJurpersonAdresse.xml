@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VJurpersonAdresse"
+  Version="12.2.1.16.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ADF.V_JURPERSON_ADRESSE"
+  AliasName="VJurpersonAdresse"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Jurpersonid"
+    IsNotNull="true"
+    Precision="9"
+    Scale="0"
+    ColumnName="JURPERSONID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_JURPERSON_ADRESSE"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Adresse"
+    Precision="60"
+    ColumnName="ADRESSE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON_ADRESSE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Postboksnr"
+    Precision="6"
+    Scale="0"
+    ColumnName="POSTBOKSNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ADF.V_JURPERSON_ADRESSE"/>
+  <Attribute
+    Name="Postnr"
+    Precision="10"
+    ColumnName="POSTNR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON_ADRESSE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Poststad"
+    Precision="30"
+    ColumnName="POSTSTAD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON_ADRESSE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Landkode"
+    Precision="3"
+    ColumnName="LANDKODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON_ADRESSE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Landnavn"
+    Precision="4000"
+    ColumnName="LANDNAVN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADF.V_JURPERSON_ADRESSE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="VJurperson"
+    Association="com.pocapp.enoro.model.eo.CJurpersonAdresseJpidAssoc"
+    AssociationEnd="com.pocapp.enoro.model.eo.CJurpersonAdresseJpidAssoc.VJurperson"
+    AssociationOtherEnd="com.pocapp.enoro.model.eo.CJurpersonAdresseJpidAssoc.VJurpersonAdresse"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkVJurpersonAdresse"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_V_JURPERSON_ADRESSE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VJurpersonAdresse.Jurpersonid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CJurpersonAdresseJpid">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_V_LEGALENTITYX"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="C_JURPERSON_ADRESSE_JPID"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.eo.VJurpersonAdresse.Jurpersonid"/>
+    </AttrArray>
+  </Key>
+</Entity>
