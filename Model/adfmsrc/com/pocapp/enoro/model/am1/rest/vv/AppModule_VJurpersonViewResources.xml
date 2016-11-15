@@ -8,7 +8,7 @@
     <iterator Binds="VJurpersonView1" RangeSize="5" DataControl="AppModuleDataControl" id="VJurpersonView1Iter"/>
   </executables>
   <bindings>
-    <tree IterBinding="VJurpersonView1Iter" id="VJurpersonView1" AccessorFolder="Always">
+    <tree IterBinding="VJurpersonView1Iter" id="customer" AccessorFolder="Always">
       <nodeDefinition DefName="com.pocapp.enoro.model.am1.vo.VJurpersonView"
                       Name="com.pocapp.enoro.model.am1.vo.VJurpersonView">
         <Accessors>
@@ -17,10 +17,6 @@
       </nodeDefinition>
       <nodeDefinition DefName="com.pocapp.enoro.model.am1.vo.VKontraktView"
                       Name="com.pocapp.enoro.model.am1.vo.VKontraktView"/>
-    </tree>
-    <tree IterBinding="VJurpersonView1Iter" id="person" AccessorFolder="Always">
-      <nodeDefinition DefName="com.pocapp.enoro.model.am1.vo.VJurpersonView"
-                      Name="com.pocapp.enoro.model.am1.vo.VJurpersonView"/>
     </tree>
   </bindings>
 </pageDefinition>

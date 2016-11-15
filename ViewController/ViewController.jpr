@@ -87,7 +87,7 @@
       <list n="technologyScope">
          <string v="ADF_FACES"/>
          <string v="ADFc"/>
-		 <string v="ADFm"/>
+         <string v="ADFm"/>
          <string v="JSF"/>
          <string v="JSP"/>
          <string v="Java"/>
@@ -181,7 +181,7 @@
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
       <value n="j2eeWebAppName" v="POCApp-ViewController-webapp"/>
-      <value n="j2eeWebContextRoot" v="POCApp-ViewController-context-root"/>
+      <value n="j2eeWebContextRoot" v="Enoro"/>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
