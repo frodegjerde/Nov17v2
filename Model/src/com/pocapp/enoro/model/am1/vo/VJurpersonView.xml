@@ -22,43 +22,92 @@
     PrecisionRule="true"
     EntityAttrName="Jurpersonid"
     EntityUsage="VJurperson"
-    AliasName="JURPERSONID"/>
+    AliasName="JURPERSONID">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Jurtype"
     PrecisionRule="true"
     EntityAttrName="Jurtype"
     EntityUsage="VJurperson"
-    AliasName="JURTYPE"/>
+    AliasName="JURTYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Fornamn"
     PrecisionRule="true"
     EntityAttrName="Fornamn"
     EntityUsage="VJurperson"
-    AliasName="FORNAMN"/>
+    AliasName="FORNAMN">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Etternamn"
     PrecisionRule="true"
     EntityAttrName="Etternamn"
     EntityUsage="VJurperson"
-    AliasName="ETTERNAMN"/>
+    AliasName="ETTERNAMN">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Foodseldato"
     PrecisionRule="true"
     EntityAttrName="Foodseldato"
     EntityUsage="VJurperson"
-    AliasName="FOODSELDATO"/>
+    AliasName="FOODSELDATO">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Nationalidno"
     PrecisionRule="true"
     EntityAttrName="Nationalidno"
     EntityUsage="VJurperson"
-    AliasName="NATIONALIDNO"/>
+    AliasName="NATIONALIDNO">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Foretaksnr"
     PrecisionRule="true"
     EntityAttrName="Foretaksnr"
     EntityUsage="VJurperson"
-    AliasName="FORETAKSNR"/>
+    AliasName="FORETAKSNR">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="VDokumentView"
     ViewLink="com.pocapp.enoro.model.am1.vo.CDokumentJurpersonidLink"

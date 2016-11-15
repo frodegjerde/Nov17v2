@@ -22,35 +22,77 @@
     PrecisionRule="true"
     EntityAttrName="Jurpersonid"
     EntityUsage="VJurpersonFinancial"
-    AliasName="JURPERSONID"/>
+    AliasName="JURPERSONID">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Kundesaldo"
     PrecisionRule="true"
     EntityAttrName="Kundesaldo"
     EntityUsage="VJurpersonFinancial"
-    AliasName="KUNDESALDO"/>
+    AliasName="KUNDESALDO">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Kundeinkasso"
     PrecisionRule="true"
     EntityAttrName="Kundeinkasso"
     EntityUsage="VJurpersonFinancial"
-    AliasName="KUNDEINKASSO"/>
+    AliasName="KUNDEINKASSO">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Kundeavskriving"
     PrecisionRule="true"
     EntityAttrName="Kundeavskriving"
     EntityUsage="VJurpersonFinancial"
-    AliasName="KUNDEAVSKRIVING"/>
+    AliasName="KUNDEAVSKRIVING">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Kredittvurdering"
     PrecisionRule="true"
     EntityAttrName="Kredittvurdering"
     EntityUsage="VJurpersonFinancial"
-    AliasName="KREDITTVURDERING"/>
+    AliasName="KREDITTVURDERING">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Internrating"
     PrecisionRule="true"
     EntityAttrName="Internrating"
     EntityUsage="VJurpersonFinancial"
-    AliasName="INTERNRATING"/>
+    AliasName="INTERNRATING">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
 </ViewObject>

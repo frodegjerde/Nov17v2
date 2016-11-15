@@ -22,41 +22,90 @@
     PrecisionRule="true"
     EntityAttrName="Jurpersonid"
     EntityUsage="VJurpersonAdresse"
-    AliasName="JURPERSONID"/>
+    AliasName="JURPERSONID">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Adresse"
     PrecisionRule="true"
     EntityAttrName="Adresse"
     EntityUsage="VJurpersonAdresse"
-    AliasName="ADRESSE"/>
+    AliasName="ADRESSE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Postboksnr"
     PrecisionRule="true"
     EntityAttrName="Postboksnr"
     EntityUsage="VJurpersonAdresse"
-    AliasName="POSTBOKSNR"/>
+    AliasName="POSTBOKSNR">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Postnr"
     PrecisionRule="true"
     EntityAttrName="Postnr"
     EntityUsage="VJurpersonAdresse"
-    AliasName="POSTNR"/>
+    AliasName="POSTNR">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Poststad"
     PrecisionRule="true"
     EntityAttrName="Poststad"
     EntityUsage="VJurpersonAdresse"
-    AliasName="POSTSTAD"/>
+    AliasName="POSTSTAD">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Landkode"
     PrecisionRule="true"
     EntityAttrName="Landkode"
     EntityUsage="VJurpersonAdresse"
-    AliasName="LANDKODE"/>
+    AliasName="LANDKODE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Landnavn"
     PrecisionRule="true"
     EntityAttrName="Landnavn"
     EntityUsage="VJurpersonAdresse"
-    AliasName="LANDNAVN"/>
+    AliasName="LANDNAVN">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
 </ViewObject>
