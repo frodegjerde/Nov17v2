@@ -106,6 +106,7 @@
             <hash n="archiveOptions">
                <value n="hasManifest" v="false"/>
             </hash>
+            <value n="contextRoot"/>
             <value n="enterpriseAppName" v="POCApp_RESTWebService"/>
             <hash n="fileGroups">
                <list n="groups">
@@ -176,7 +177,7 @@
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
       <value n="j2eeWebAppName" v="POCApp-RESTWebService-webapp"/>
-      <value n="j2eeWebContextRoot" v="POCApp-RESTWebService-context-root"/>
+      <value n="j2eeWebContextRoot" v="enoroService"/>
    </hash>
    <hash n="oracle.jdeveloper.runner.RunConfigurations">
       <hash n="runConfigurationDefinitions">
@@ -203,5 +204,8 @@
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>
+   </hash>
+   <hash n="ResourceBundleOptions">
+      <list n="RegisteredResourceBundles"/>
    </hash>
 </jpr:project>

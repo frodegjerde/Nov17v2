@@ -11,6 +11,7 @@
       </amconfig-overrides>
     </startup>
     <versions>
+      <version name="V101" displayName="V1.0.1"/>
       <version name="vv" displayName="vv"/>
     </versions>
   </adf-adfm-config>
