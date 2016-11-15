@@ -19,9 +19,7 @@
                 </f:facet>
                 <f:facet name="facetRightContextualActions"/>
                 <f:facet name="facetHeader">
-                    <af:panelGroupLayout id="pgl1" layout="horizontal">
-                        <af:image source="resources/images/logo-enoro.png" id="i1"/>
-                    </af:panelGroupLayout>
+                    <af:region value="#{bindings.tf_header1.regionModel}" id="r2"/>
                 </f:facet>
                 <f:facet name="facetFooter">
                     <af:panelGroupLayout id="pgl2" halign="center">
