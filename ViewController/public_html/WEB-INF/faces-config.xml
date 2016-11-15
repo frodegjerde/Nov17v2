@@ -3,8 +3,8 @@
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
     <locale-config>
-      <default-locale>en</default-locale>
-      <supported-locale>en</supported-locale>
+      <default-locale>en-us</default-locale>
+      <supported-locale>en-us</supported-locale>
       <supported-locale>no</supported-locale>
     </locale-config>
     <resource-bundle>
