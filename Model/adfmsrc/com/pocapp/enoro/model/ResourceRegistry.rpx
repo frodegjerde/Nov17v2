@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.0.31" id="ResourceRegistry"
+             SeparateXMLFiles="false" Package="com.pocapp.enoro.model" ClientType="Generic">
+  <pageMap>
+    <page path="vv_VJurpersonView1" usageId="vv_AppModule_VJurpersonViewResources"/>
+    <page path="vv_person" usageId="vv_AppModule_VJurpersonViewResources"/>
+  </pageMap>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.pocapp.enoro.model.am1"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+  <pageDefinitionUsages>
+    <page id="vv_AppModule_VJurpersonViewResources"
+          path="com.pocapp.enoro.model.am1.rest.vv.AppModule_VJurpersonViewResources"/>
+  </pageDefinitionUsages>
+</Application>

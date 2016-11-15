@@ -69,142 +69,64 @@
       <string v="oracle.adfdtinternal.model.ide.settings.ADFMSettings/adfmContentSet"/>
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
-   <value n="defaultPackage" v="com.pocapp.enoro.model"/>
-   <value n="jbo.JpxName" v="com.pocapp.enoro.model.Model"/>
-   <value n="jbo.NoAttrEnumClasses" v="true"/>
-   <value n="JboProject" v="true"/>
+   <value n="defaultPackage" v="com.pocapp.enoro"/>
+   <hash n="oracle.ide.model.DependencyConfiguration">
+      <list n="dependencyList">
+         <hash>
+            <hash n="dependable">
+               <hash n="deployDependable">
+                  <value n="adapterClass" v="oracle.jdevimpl.deploy.common.ArchiveProfileDependable"/>
+                  <url n="ownerURL" path="../Model/Model.jpr"/>
+                  <value n="profileName" v="POCApp_Model_resources"/>
+               </hash>
+            </hash>
+            <value n="recognizerId" v="oracle.jdeveloper.deploy.common"/>
+         </hash>
+      </list>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
-         <string v="ADFbc"/>
-         <string v="ADFm"/>
-         <string v="Java"/>
+         <string v="ADFbcREST"/>
          <string v="XML"/>
       </list>
    </hash>
-   <value n="oracle.jbo.SavedPreferences" v="true"/>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
-      <list n="copyRes">
-         <string v=".cpx"/>
-         <string v=".dcx"/>
-         <string v=".ejx"/>
-         <string v=".gif"/>
-         <string v=".ini"/>
-         <string v=".jpeg"/>
-         <string v=".jpg"/>
-         <string v=".png"/>
-         <string v=".properties"/>
-         <string v=".sva"/>
-         <string v=".tag"/>
-         <string v=".tld"/>
-         <string v=".wsdl"/>
-         <string v=".xcfg"/>
-         <string v=".xlf"/>
-         <string v=".xml"/>
-         <string v=".xsd"/>
-         <string v=".xsl"/>
-         <string v=".jpx"/>
-         <string v=".rpx"/>
-         <string v=".bcs"/>
-      </list>
       <value n="webIANAEncoding" v="windows-1252"/>
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="POCApp_Model">
-            <value n="adflib-connectionDetails" v="true"/>
-            <value n="adflib-nonReusablesError" v="false"/>
-            <hash n="archiveOptions">
-               <value n="hasManifest" v="true"/>
+         <hash n="POCApp_RESTWebService">
+            <hash n="appletArchives"/>
+            <hash n="appletFiles">
+               <value n="autoInclude" v="true"/>
+               <list n="selectionFilters">
+                  <string v="oracle.jdevimpl.deploy.common.JavaSelectionFilter"/>
+               </list>
             </hash>
+            <hash n="archiveOptions">
+               <value n="hasManifest" v="false"/>
+            </hash>
+            <value n="enterpriseAppName" v="POCApp_RESTWebService"/>
             <hash n="fileGroups">
                <list n="groups">
                   <hash>
                      <list n="contributors">
                         <hash>
-                           <value n="type" v="2"/>
-                        </hash>
-                        <hash>
                            <value n="type" v="5"/>
                         </hash>
                      </list>
-                     <value n="displayName" v="Project Output"/>
+                     <value n="displayName" v="Web Files"/>
                      <hash n="filters">
                         <list n="rules">
-                           <hash>
-                              <value n="pattern" v="WEB-INF/classes/**"/>
-                              <value n="type" v="1"/>
-                           </hash>
                            <hash>
                               <value n="pattern" v="**"/>
                               <value n="type" v="0"/>
                            </hash>
                         </list>
                      </hash>
-                     <value n="internalName" v="project-output"/>
+                     <value n="internalName" v="web-files"/>
                      <value n="type" v="1"/>
                   </hash>
-               </list>
-            </hash>
-            <url n="jarURL" path="deploy/POCApp_Model.jar"/>
-            <hash n="LibraryDependencies"/>
-            <value n="profileClass" v="oracle.adfdt.common.deploy.impl.AdfLibraryProfile"/>
-            <value n="profileName" v="POCApp_Model"/>
-         </hash>
-         <hash n="POCApp_Model_adflib">
-            <value n="adflib-connectionDetails" v="true"/>
-            <value n="adflib-nonReusablesError" v="false"/>
-            <hash n="archiveOptions">
-               <value n="hasManifest" v="true"/>
-            </hash>
-            <hash n="fileGroups">
-               <list n="groups">
-                  <hash>
-                     <list n="contributors">
-                        <hash>
-                           <value n="type" v="2"/>
-                        </hash>
-                        <hash>
-                           <value n="type" v="5"/>
-                        </hash>
-                     </list>
-                     <value n="displayName" v="Project Output"/>
-                     <hash n="filters">
-                        <list n="rules">
-                           <hash>
-                              <value n="pattern" v="WEB-INF/classes/**"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**"/>
-                              <value n="type" v="0"/>
-                           </hash>
-                        </list>
-                     </hash>
-                     <value n="internalName" v="project-output"/>
-                     <value n="type" v="1"/>
-                  </hash>
-               </list>
-            </hash>
-            <url n="jarURL" path="deploy/POCApp_Model_adflib.jar"/>
-            <hash n="LibraryDependencies"/>
-            <value n="profileClass" v="oracle.adfdt.common.deploy.impl.AdfLibraryProfile"/>
-            <value n="profileName" v="POCApp_Model_adflib"/>
-         </hash>
-         <hash n="POCApp_Model_resources">
-            <hash n="archiveOptions">
-               <value n="hasManifest" v="true"/>
-            </hash>
-            <hash n="dependencies">
-               <list n="dependencyList">
-                  <hash>
-                     <value n="adapterClass" v="oracle.jdevimpl.deploy.common.ArchiveProfileDependable"/>
-                     <url n="ownerURL" path="Model.jpr"/>
-                     <value n="profileName" v="POCApp_Model_adflib"/>
-                  </hash>
-               </list>
-            </hash>
-            <hash n="fileGroups">
-               <list n="groups">
                   <hash>
                      <list n="contributors">
                         <hash>
@@ -214,101 +136,67 @@
                            <value n="type" v="7"/>
                         </hash>
                      </list>
-                     <value n="displayName" v="Project Output"/>
+                     <value n="displayName" v="WEB-INF/classes"/>
                      <hash n="filters">
                         <list n="rules">
                            <hash>
-                              <value n="pattern" v="META-INF/adfm.xml"/>
-                              <value n="type" v="0"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**.rpx"/>
-                              <value n="type" v="0"/>
-                           </hash>
-                           <hash>
                               <value n="pattern" v="**"/>
-                              <value n="type" v="1"/>
+                              <value n="type" v="0"/>
                            </hash>
                         </list>
                      </hash>
                      <value n="internalName" v="project-output"/>
+                     <value n="targetWithinJar" v="WEB-INF/classes"/>
                      <value n="type" v="1"/>
+                  </hash>
+                  <hash>
+                     <value n="displayName" v="WEB-INF/lib"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="**"/>
+                              <value n="type" v="0"/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="libraries"/>
+                     <value n="targetWithinJar" v="WEB-INF/lib"/>
+                     <value n="type" v="3"/>
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/POCApp_Model_resources.jar"/>
-            <value n="profileClass" v="oracle.jdeveloper.deploy.jar.ArchiveProfile"/>
-            <value n="profileName" v="POCApp_Model_resources"/>
+            <url n="jarURL" path="deploy/POCApp_RESTWebService.war"/>
+            <value n="profileClass" v="oracle.jdeveloper.deploy.war.WarProfile"/>
+            <value n="profileName" v="POCApp_RESTWebService"/>
          </hash>
       </hash>
       <list n="profileList">
-         <string v="POCApp_Model_adflib"/>
-         <string v="POCApp_Model"/>
-         <string v="POCApp_Model_resources"/>
+         <string v="POCApp_RESTWebService"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="POCApp-Model-webapp"/>
-      <value n="j2eeWebContextRoot" v="POCApp-Model-context-root"/>
+      <value n="j2eeWebAppName" v="POCApp-RESTWebService-webapp"/>
+      <value n="j2eeWebContextRoot" v="POCApp-RESTWebService-context-root"/>
+   </hash>
+   <hash n="oracle.jdeveloper.runner.RunConfigurations">
+      <hash n="runConfigurationDefinitions">
+         <hash n="Default">
+            <value n="custom" v="false"/>
+            <value n="name" v="Default"/>
+            <url n="targetURL" path="public_html/WEB-INF/web.xml"/>
+         </hash>
+      </hash>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="BC4J Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ADF Model Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="MDS Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="MDS Runtime Dependencies"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="BC4J Security"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Oracle JDBC"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="BC4J Oracle Domains"/>
+            <value n="id" v="ADF Model REST Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
       <list n="libraryReferences">
          <hash>
-            <value n="id" v="BC4J Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ADF Model Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="MDS Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="MDS Runtime Dependencies"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="BC4J Security"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Oracle JDBC"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="BC4J Oracle Domains"/>
+            <value n="id" v="ADF Model REST Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
