@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:activeOutputText value="activeOutputText1" id="aot1"/>
+  <af:activeOutputText value="#{tf_cw_b['inital.text']}" id="aot1"/>
 </ui:composition>
