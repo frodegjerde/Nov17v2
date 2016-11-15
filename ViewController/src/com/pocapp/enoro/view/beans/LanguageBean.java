@@ -1,5 +1,7 @@
 package com.pocapp.enoro.view.beans;
 
+import com.pocapp.enoro.view.utils.OtherUtils;
+
 import java.io.Serializable;
 
 import javax.faces.event.ValueChangeEvent;
@@ -25,6 +27,8 @@ public class LanguageBean implements Serializable {
         this.language = newLang;
         
         changeLocale(newLang);
+        
+        //OtherUtils.refreshPage();
     }
     
     private void changeLocale(String newL){
