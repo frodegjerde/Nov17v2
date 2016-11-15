@@ -67,7 +67,7 @@
           </af:panelFormLayout>
         </f:facet>
         <f:facet name="second">
-          <af:panelSplitter id="ps3" splitterPosition="50" orientation="vertical">
+          <af:panelSplitter id="ps3" splitterPosition="55" orientation="vertical">
             <f:facet name="first"/>
             <f:facet name="second">
               <af:panelSplitter id="ps4" orientation="vertical" splitterPosition="219">
