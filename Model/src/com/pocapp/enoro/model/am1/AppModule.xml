@@ -88,6 +88,18 @@
   <ViewUsage
     Name="VReskontroView3"
     ViewObjectName="com.pocapp.enoro.model.am1.vo.VReskontroView"/>
+  <ViewUsage
+    Name="VInstallcodeFullView1"
+    ViewObjectName="com.pocapp.enoro.model.am1.VInstallcodeFullView"/>
+  <ViewUsage
+    Name="VKontakttypeFullView1"
+    ViewObjectName="com.pocapp.enoro.model.am1.VKontakttypeFullView"/>
+  <ViewUsage
+    Name="VKontotypeFullView1"
+    ViewObjectName="com.pocapp.enoro.model.am1.VKontotypeFullView"/>
+  <ViewUsage
+    Name="VKontrimportstatusFullView1"
+    ViewObjectName="com.pocapp.enoro.model.am1.VKontrimportstatusFullView"/>
   <ViewLinkUsage
     Name="CDokumentJurpersonidLink1"
     ViewLinkObjectName="com.pocapp.enoro.model.am1.vo.CDokumentJurpersonidLink"
