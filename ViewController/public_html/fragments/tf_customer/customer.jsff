@@ -26,7 +26,7 @@
               <f:validator binding="#{bindings.Foodseldato.validator}"/>
               <af:convertDateTime pattern="#{bindings.Foodseldato.format}"/>
             </af:inputDate>
-            <af:selectOneChoice value="#{bindings.Jurtype1.inputValue}" label="#{bindings.Jurtype1.label}"
+            <af:selectOneChoice value="#{bindings.Jurtype1.inputValue}" label="Type"
                                 required="#{bindings.Jurtype1.hints.mandatory}"
                                 shortDesc="#{bindings.Jurtype1.hints.tooltip}" id="soc3">
               <f:selectItems value="#{bindings.Jurtype1.items}" id="si3"/>
@@ -47,7 +47,7 @@
               <f:validator binding="#{bindings.Foretaksnr.validator}"/>
             </af:inputText>
             <f:facet name="footer">
-              <af:panelGroupLayout layout="vertical" id="pgl1">
+              <af:panelGroupLayout layout="vertical" id="pgl1" halign="center">
                 <af:panelGroupLayout layout="horizontal" id="pgl2">
                   <af:button actionListener="#{bindings.First.execute}" text="First"
                              disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b1"/>
