@@ -55,11 +55,11 @@
       <property
          name="activityId">Save</property>
       <property
-         name="x">948.0</property>
+         name="x">1190.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Save&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  Save&lt;/p></property>
       <property
-         name="y">208.88477</property>
+         name="y">212.1836</property>
       <property
          name="finish">true</property>
       <property
@@ -73,7 +73,7 @@
       <property
          name="fromOutcome">save</property>
       <property
-         name="sdm:polyPoints">R50,859.0,208.24707,907.0,208.53418,L50</property>
+         name="sdm:polyPoints">R50,1051.0,208.14355,1149.0,211.83301,L50</property>
    </ControlFlowCase>
    <View
       id="View10">
@@ -82,11 +82,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">818.0</property>
+         name="x">1010.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>review&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">208.59766</property>
+         name="y">208.49414</property>
       <property
          name="page">/fragments/tf_customerwizard/review.jsff</property>
       <property
@@ -94,12 +94,39 @@
       <property
          name="trainStop">true</property>
    </View>
+   <View
+      id="View9">
+      <property
+         name="activityId">Products</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">847.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Products&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">210.19531</property>
+      <property
+         name="page">/fragments/tf_customerwizard/Products.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="trainStop">true</property>
+   </View>
    <TrainFlow
       islink="true"
-      id="TrainFlow11"
+      id="TrainFlow14"
       from="View3"
+      to="View9">
+      <property
+         name="sdm:polyPoints">R50,720.0,207.5459,806.0,209.84473,L50</property>
+   </TrainFlow>
+   <TrainFlow
+      islink="true"
+      id="TrainFlow15"
+      from="View9"
       to="View10">
       <property
-         name="sdm:polyPoints">R50,720.0,207.5459,777.0,208.24707,L50</property>
+         name="sdm:polyPoints">R50,888.0,209.84473,969.0,208.14355,L50</property>
    </TrainFlow>
 </SDM>

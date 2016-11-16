@@ -88,6 +88,12 @@
   <ViewUsage
     Name="VReskontroView3"
     ViewObjectName="com.pocapp.enoro.model.am1.vo.VReskontroView"/>
+  <ViewUsage
+    Name="VProductView1"
+    ViewObjectName="com.pocapp.enoro.model.am1.vo.VProductView"/>
+  <ViewUsage
+    Name="VProductView2"
+    ViewObjectName="com.pocapp.enoro.model.am1.vo.VProductView"/>
   <ViewLinkUsage
     Name="CDokumentJurpersonidLink1"
     ViewLinkObjectName="com.pocapp.enoro.model.am1.vo.CDokumentJurpersonidLink"

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VProduct"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="V_PRODUCT"
+  AliasName="VProduct"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Productnr"
+    IsNotNull="true"
+    Precision="3"
+    Scale="0"
+    ColumnName="PRODUCTNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="V_PRODUCT"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Productid"
+    IsNotNull="true"
+    Precision="5"
+    ColumnName="PRODUCTID"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="V_PRODUCT"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="5"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Productgrpnr"
+    IsNotNull="true"
+    Precision="3"
+    Scale="0"
+    ColumnName="PRODUCTGRPNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="V_PRODUCT"/>
+  <Attribute
+    Name="Productname"
+    IsNotNull="true"
+    Precision="30"
+    ColumnName="PRODUCTNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="V_PRODUCT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Contracttypeno"
+    Precision="3"
+    Scale="0"
+    ColumnName="CONTRACTTYPENO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="V_PRODUCT"/>
+  <Key
+    Name="PkVProduct"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_V_PRODUCT"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.am1.eo.VProduct.Productnr"/>
+    </AttrArray>
+  </Key>
+</Entity>
