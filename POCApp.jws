@@ -94,4 +94,17 @@
          <string v="POCApp_Project1_POCApp"/>
       </list>
    </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="ApplicationSrcContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="Weblogic JDBC">
+      <value n="Weblogic-JDBC-Auto-Sync-Key" v="true"/>
+   </hash>
 </jws:workspace>

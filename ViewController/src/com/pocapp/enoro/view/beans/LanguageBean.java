@@ -8,12 +8,25 @@ import javax.faces.event.ValueChangeEvent;
 
 import java.util.Locale;
 
+import java.util.ResourceBundle;
+
 import javax.faces.context.FacesContext;
 
 public class LanguageBean implements Serializable {
-    
-    private String language;
-    
+    @SuppressWarnings("compatibility:2092157638886270800")
+    private static final long serialVersionUID = 1L;
+
+    private String language = "en";
+    private Locale locale = Locale.getDefault();
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public Locale getLocale() {
+        return locale;
+    }
+
     public LanguageBean() {
         language = Locale.getDefault().getLanguage(); 
         System.out.println("Constructor for LanguageBean; language = " + language);
@@ -28,12 +41,27 @@ public class LanguageBean implements Serializable {
         
         changeLocale(newLang);
         
-        //OtherUtils.refreshPage();
+        //ResourceBundle.clearCache();
+        OtherUtils.refreshPage();
     }
     
     private void changeLocale(String newL){
-        Locale locale = new Locale(newL);  
+        locale = new Locale(newL);  
         FacesContext context = FacesContext.getCurrentInstance();  
         context.getViewRoot().setLocale(locale);   
+        
+        //OtherUtils.refreshComponent(context.getViewRoot());
+        
+        //OtherUtils.resetStaleValues();
+    }
+    
+    public String getCurrentLanguage(){
+        if (language.equals("no")){
+            return "Norska";
+        }
+        if (language.equals("en")){
+            return "English";
+        }
+        return "";
     }
 }

@@ -194,10 +194,18 @@
             <value n="id" v="ADF Model REST Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="JPS Designtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
             <value n="id" v="ADF Model REST Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JPS Designtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

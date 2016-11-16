@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-        xmlns:c="http://java.sun.com/jsp/jstl/core">
+        xmlns:c="http://java.sun.com/jsp/jstl/core"
+        locale="#{languageBean.locale}"> 
     <c:set var="viewcontrollerBundle" value="#{adfBundle['com.pocapp.enoro.view.ViewControllerBundle']}"/>
-    <af:document title="untitled1.jsf" id="d1">
-        <af:form id="f1">
-            <af:pageTemplate viewId="/mainTemplate.jsf" id="pt1">
-                <f:facet name="facetLeftNavigation" partialTriggers="::r2">
-                    <af:panelGroupLayout id="pgl3" layout="vertical">
+    <af:document title="untitled1.jsf" id="d1" 
+            >
+        <af:form id="f1" >
+            <af:pageTemplate viewId="/mainTemplate.jsf" id="pt1" >
+                <f:facet name="facetLeftNavigation" >
+                    <af:panelGroupLayout id="pgl3" layout="vertical" partialTriggers="r2">
                         <af:link text="#{viewcontrollerBundle['Untitled1.customer']}" action="#{viewScope.navigationBean.customer_tf}" id="l1"/>
                         <af:link text="Customer Wizard" action="#{viewScope.navigationBean.customerWizard_tf}"
                                  id="l2"/>
@@ -23,8 +25,9 @@
                     <af:region value="#{bindings.tf_header1.regionModel}" id="r2"/>
                 </f:facet>
                 <f:facet name="facetFooter">
-                    <af:panelGroupLayout id="pgl2" halign="center">
+                    <af:panelGroupLayout id="pgl2" halign="center" partialTriggers="r2">
                         <af:outputText value="Copyright 2016" id="ot1"/>
+                        <af:outputText value="#{tf_cw_b['inital.text']}" id="ot12"/>
                     </af:panelGroupLayout>
                 </f:facet>
             </af:pageTemplate>
