@@ -1,3 +1,61 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+  <af:decorativeBox id="db1">
+    <f:facet name="top">
+      <h:panelGroup id="pg1">
+        <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
+      </h:panelGroup>
+    </f:facet>
+    <f:facet name="center">
+      <af:panelFormLayout id="pfl1">
+        <af:panelLabelAndMessage label="#{bindings.Jurpersonid.hints.label}" id="plam1">
+          <af:outputText value="#{bindings.Jurpersonid.inputValue}" shortDesc="#{bindings.Jurpersonid.hints.tooltip}"
+                         id="ot1">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Jurpersonid.format}"/>
+          </af:outputText>
+        </af:panelLabelAndMessage>
+        <af:selectOneChoice value="#{bindings.Jurtype.inputValue}" label="#{bindings.Jurtype.label}"
+                            required="#{bindings.Jurtype.hints.mandatory}" shortDesc="#{bindings.Jurtype.hints.tooltip}"
+                            id="soc1">
+          <f:selectItems value="#{bindings.Jurtype.items}" id="si1"/>
+          <f:validator binding="#{bindings.Jurtype.validator}"/>
+        </af:selectOneChoice>
+        <af:inputText value="#{bindings.Fornamn.inputValue}" label="#{bindings.Fornamn.hints.label}"
+                      required="#{bindings.Fornamn.hints.mandatory}" columns="#{bindings.Fornamn.hints.displayWidth}"
+                      maximumLength="#{bindings.Fornamn.hints.precision}" shortDesc="#{bindings.Fornamn.hints.tooltip}"
+                      id="it1">
+          <f:validator binding="#{bindings.Fornamn.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Etternamn.inputValue}" label="#{bindings.Etternamn.hints.label}"
+                      required="#{bindings.Etternamn.hints.mandatory}"
+                      columns="#{bindings.Etternamn.hints.displayWidth}"
+                      maximumLength="#{bindings.Etternamn.hints.precision}"
+                      shortDesc="#{bindings.Etternamn.hints.tooltip}" id="it2">
+          <f:validator binding="#{bindings.Etternamn.validator}"/>
+        </af:inputText>
+        <af:inputDate value="#{bindings.Foodseldato.inputValue}" label="#{bindings.Foodseldato.hints.label}"
+                      required="#{bindings.Foodseldato.hints.mandatory}"
+                      columns="#{bindings.Foodseldato.hints.displayWidth}"
+                      shortDesc="#{bindings.Foodseldato.hints.tooltip}" id="id1">
+          <f:validator binding="#{bindings.Foodseldato.validator}"/>
+          <af:convertDateTime pattern="#{bindings.Foodseldato.format}"/>
+        </af:inputDate>
+        <af:inputText value="#{bindings.Nationalidno.inputValue}" label="#{bindings.Nationalidno.hints.label}"
+                      required="#{bindings.Nationalidno.hints.mandatory}"
+                      columns="#{bindings.Nationalidno.hints.displayWidth}"
+                      maximumLength="#{bindings.Nationalidno.hints.precision}"
+                      shortDesc="#{bindings.Nationalidno.hints.tooltip}" id="it3">
+          <f:validator binding="#{bindings.Nationalidno.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Foretaksnr.inputValue}" label="#{bindings.Foretaksnr.hints.label}"
+                      required="#{bindings.Foretaksnr.hints.mandatory}"
+                      columns="#{bindings.Foretaksnr.hints.displayWidth}"
+                      maximumLength="#{bindings.Foretaksnr.hints.precision}"
+                      shortDesc="#{bindings.Foretaksnr.hints.tooltip}" id="it4">
+          <f:validator binding="#{bindings.Foretaksnr.validator}"/>
+        </af:inputText>
+      </af:panelFormLayout>
+    </f:facet>
+  </af:decorativeBox>
 </ui:composition>

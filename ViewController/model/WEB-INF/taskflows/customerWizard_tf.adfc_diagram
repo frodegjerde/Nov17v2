@@ -23,4 +23,56 @@
       <property
          name="exceptionHandler">false</property>
    </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">address</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">678.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>address&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">206.59766</property>
+      <property
+         name="page">/fragments/tf_customerwizard/address.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="trainStop">true</property>
+   </View>
+   <TrainFlow
+      islink="true"
+      id="TrainFlow4"
+      from="View2"
+      to="View3">
+      <property
+         name="sdm:polyPoints">R50,592.0,206.44238,637.0,206.24707,L50</property>
+   </TrainFlow>
+   <TaskFlowReturn
+      id="TaskFlowReturn5">
+      <property
+         name="activityId">Save</property>
+      <property
+         name="x">844.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Save&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  Save&lt;/p></property>
+      <property
+         name="y">196.74121</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View3"
+      to="TaskFlowReturn5">
+      <property
+         name="fromOutcome">save</property>
+      <property
+         name="sdm:polyPoints">R50,719.0,206.24707,803.0,196.74121,L50</property>
+   </ControlFlowCase>
 </SDM>

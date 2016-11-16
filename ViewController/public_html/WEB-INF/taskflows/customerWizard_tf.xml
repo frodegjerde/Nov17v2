@@ -2,14 +2,38 @@
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="customerWizard_tf">
     <default-activity>initial</default-activity>
+    <transaction>
+      <new-transaction/>
+    </transaction>
     <data-control-scope>
       <shared/>
     </data-control-scope>
     <view id="initial">
       <page>/fragments/tf_customerwizard/initial.jsff</page>
-      <train-stop/>
+      <train-stop>
+        <display-name>Customer</display-name>
+      </train-stop>
     </view>
+    <view id="address">
+      <page>/fragments/tf_customerwizard/address.jsff</page>
+      <train-stop>
+        <display-name>Address</display-name>
+      </train-stop>
+    </view>
+    <task-flow-return id="Save">
+      <outcome>
+        <name>Save</name>
+        <commit/>
+      </outcome>
+    </task-flow-return>
     <train/>
+    <control-flow-rule id="__1">
+      <from-activity-id>address</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>save</from-outcome>
+        <to-activity-id>Save</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>
