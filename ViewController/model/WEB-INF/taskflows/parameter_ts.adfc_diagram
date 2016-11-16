@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">parameter</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">594.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>parameter&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">281.1953</property>
+      <property
+         name="page">/fragments/tf_parameter/tf_parameter.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+</SDM>

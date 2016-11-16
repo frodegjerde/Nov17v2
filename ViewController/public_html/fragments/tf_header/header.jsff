@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout id="pgl1" layout="horizontal">
+    <af:panelGroupLayout id="pgl2" layout="horizontal" halign="left">
+        <af:image source="/resources/images/logo-enoro.png" id="i1"/>
+    </af:panelGroupLayout>
+    <af:panelGroupLayout id="pgl3" halign="right">
+      <af:selectOneChoice id="soc1" label="Language" valueChangeListener="#{languageBean.languageSelectionChanged}"
+                          autoSubmit="true">
+        <af:selectItem label="English" value="en"  id="si1"/>
+        <af:selectItem label="Norsk" value="no" id="si2"/>
+      </af:selectOneChoice>
+    </af:panelGroupLayout>
+  </af:panelGroupLayout>
+</ui:composition>
