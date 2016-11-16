@@ -171,4 +171,8 @@
       <Item Value="com.pocapp.enoro.model.am1.eo.VJurperson.Jurtype"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.pocapp.enoro.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

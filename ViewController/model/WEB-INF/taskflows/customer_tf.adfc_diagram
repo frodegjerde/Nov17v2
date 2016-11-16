@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>customer&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">270.5459</property>
+         name="y">270.1953</property>
       <property
          name="page">/fragments/tf_customer/customer.jsff</property>
       <property

@@ -13,6 +13,28 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="VJurtypeView1"
+    ViewObjectName="com.pocapp.enoro.model.am1.vo.VJurtypeView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Jurtype"
+    ListVOName="VJurtypeView1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Jurtype"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Jurtype"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Jurtypenamn"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="VJurperson"
     Entity="com.pocapp.enoro.model.am1.eo.VJurperson"/>
@@ -35,11 +57,14 @@
     PrecisionRule="true"
     EntityAttrName="Jurtype"
     EntityUsage="VJurperson"
-    AliasName="JURTYPE">
+    AliasName="JURTYPE"
+    LOVName="LOV_Jurtype">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
