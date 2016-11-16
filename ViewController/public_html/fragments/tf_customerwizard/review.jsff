@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+  <af:decorativeBox id="db1">
+    <f:facet name="top">
+      <h:panelGroup id="pg1">
+        <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
+      </h:panelGroup>
+    </f:facet>
+    <f:facet name="center">
+      <af:panelFormLayout id="pfl1">
+        <af:inputText value="#{bindings.Jurpersonid.inputValue}" label="#{bindings.Jurpersonid.hints.label}"
+                      required="#{bindings.Jurpersonid.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Jurpersonid.hints.displayWidth}"
+                      maximumLength="#{bindings.Jurpersonid.hints.precision}"
+                      shortDesc="#{bindings.Jurpersonid.hints.tooltip}" id="it1">
+          <f:validator binding="#{bindings.Jurpersonid.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.Jurpersonid.format}"/>
+        </af:inputText>
+        <af:selectOneChoice value="#{bindings.Jurtype.inputValue}" label="#{bindings.Jurtype.label}"
+                            required="#{bindings.Jurtype.hints.mandatory}" shortDesc="#{bindings.Jurtype.hints.tooltip}"
+                            readOnly="true" id="soc1">
+          <f:selectItems value="#{bindings.Jurtype.items}" id="si1"/>
+          <f:validator binding="#{bindings.Jurtype.validator}"/>
+        </af:selectOneChoice>
+        <af:inputText value="#{bindings.Fornamn.inputValue}" label="#{bindings.Fornamn.hints.label}"
+                      required="#{bindings.Fornamn.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Fornamn.hints.displayWidth}"
+                      maximumLength="#{bindings.Fornamn.hints.precision}" shortDesc="#{bindings.Fornamn.hints.tooltip}"
+                      id="it2">
+          <f:validator binding="#{bindings.Fornamn.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Etternamn.inputValue}" label="#{bindings.Etternamn.hints.label}"
+                      required="#{bindings.Etternamn.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Etternamn.hints.displayWidth}"
+                      maximumLength="#{bindings.Etternamn.hints.precision}"
+                      shortDesc="#{bindings.Etternamn.hints.tooltip}" id="it3">
+          <f:validator binding="#{bindings.Etternamn.validator}"/>
+        </af:inputText>
+        <af:inputDate value="#{bindings.Foodseldato.inputValue}" readOnly="true"
+                      label="#{bindings.Foodseldato.hints.label}" required="#{bindings.Foodseldato.hints.mandatory}"
+                      columns="#{bindings.Foodseldato.hints.displayWidth}"
+                      shortDesc="#{bindings.Foodseldato.hints.tooltip}" id="id1">
+          <f:validator binding="#{bindings.Foodseldato.validator}"/>
+          <af:convertDateTime pattern="#{bindings.Foodseldato.format}"/>
+        </af:inputDate>
+        <af:inputText value="#{bindings.Nationalidno.inputValue}" label="#{bindings.Nationalidno.hints.label}"
+                      required="#{bindings.Nationalidno.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Nationalidno.hints.displayWidth}"
+                      maximumLength="#{bindings.Nationalidno.hints.precision}"
+                      shortDesc="#{bindings.Nationalidno.hints.tooltip}" id="it4">
+          <f:validator binding="#{bindings.Nationalidno.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Foretaksnr.inputValue}" label="#{bindings.Foretaksnr.hints.label}"
+                      required="#{bindings.Foretaksnr.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Foretaksnr.hints.displayWidth}"
+                      maximumLength="#{bindings.Foretaksnr.hints.precision}"
+                      shortDesc="#{bindings.Foretaksnr.hints.tooltip}" id="it5">
+          <f:validator binding="#{bindings.Foretaksnr.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Adresse.inputValue}" label="#{bindings.Adresse.hints.label}"
+                      required="#{bindings.Adresse.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Adresse.hints.displayWidth}"
+                      maximumLength="#{bindings.Adresse.hints.precision}" shortDesc="#{bindings.Adresse.hints.tooltip}"
+                      id="it6">
+          <f:validator binding="#{bindings.Adresse.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Postboksnr.inputValue}" label="#{bindings.Postboksnr.hints.label}"
+                      required="#{bindings.Postboksnr.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Postboksnr.hints.displayWidth}"
+                      maximumLength="#{bindings.Postboksnr.hints.precision}"
+                      shortDesc="#{bindings.Postboksnr.hints.tooltip}" id="it7">
+          <f:validator binding="#{bindings.Postboksnr.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.Postboksnr.format}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Postnr.inputValue}" label="#{bindings.Postnr.hints.label}"
+                      required="#{bindings.Postnr.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Postnr.hints.displayWidth}" maximumLength="#{bindings.Postnr.hints.precision}"
+                      shortDesc="#{bindings.Postnr.hints.tooltip}" id="it8">
+          <f:validator binding="#{bindings.Postnr.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Poststad.inputValue}" label="#{bindings.Poststad.hints.label}"
+                      required="#{bindings.Poststad.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Poststad.hints.displayWidth}"
+                      maximumLength="#{bindings.Poststad.hints.precision}"
+                      shortDesc="#{bindings.Poststad.hints.tooltip}" id="it9">
+          <f:validator binding="#{bindings.Poststad.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Landkode.inputValue}" label="#{bindings.Landkode.hints.label}"
+                      required="#{bindings.Landkode.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Landkode.hints.displayWidth}"
+                      maximumLength="#{bindings.Landkode.hints.precision}"
+                      shortDesc="#{bindings.Landkode.hints.tooltip}" id="it10">
+          <f:validator binding="#{bindings.Landkode.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Landnavn.inputValue}" label="#{bindings.Landnavn.hints.label}"
+                      required="#{bindings.Landnavn.hints.mandatory}" readOnly="true"
+                      columns="#{bindings.Landnavn.hints.displayWidth}"
+                      maximumLength="#{bindings.Landnavn.hints.precision}"
+                      shortDesc="#{bindings.Landnavn.hints.tooltip}" id="it11">
+          <f:validator binding="#{bindings.Landnavn.validator}"/>
+        </af:inputText>
+        <af:button text="Save" id="b1" action="save"/>
+      </af:panelFormLayout>
+    </f:facet>
+  </af:decorativeBox>
+</ui:composition>

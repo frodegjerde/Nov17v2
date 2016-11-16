@@ -30,11 +30,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">678.0</property>
+         name="x">679.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>address&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">206.59766</property>
+         name="y">207.89648</property>
       <property
          name="page">/fragments/tf_customerwizard/address.jsff</property>
       <property
@@ -48,18 +48,18 @@
       from="View2"
       to="View3">
       <property
-         name="sdm:polyPoints">R50,592.0,206.44238,637.0,206.24707,L50</property>
+         name="sdm:polyPoints">R50,592.0,206.44238,638.0,207.5459,L50</property>
    </TrainFlow>
    <TaskFlowReturn
       id="TaskFlowReturn5">
       <property
          name="activityId">Save</property>
       <property
-         name="x">844.0</property>
+         name="x">948.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Save&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  Save&lt;/p></property>
       <property
-         name="y">196.74121</property>
+         name="y">208.88477</property>
       <property
          name="finish">true</property>
       <property
@@ -68,11 +68,38 @@
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase6"
-      from="View3"
+      from="View10"
       to="TaskFlowReturn5">
       <property
          name="fromOutcome">save</property>
       <property
-         name="sdm:polyPoints">R50,719.0,206.24707,803.0,196.74121,L50</property>
+         name="sdm:polyPoints">R50,859.0,208.24707,907.0,208.53418,L50</property>
    </ControlFlowCase>
+   <View
+      id="View10">
+      <property
+         name="activityId">review</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">818.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>review&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">208.59766</property>
+      <property
+         name="page">/fragments/tf_customerwizard/review.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="trainStop">true</property>
+   </View>
+   <TrainFlow
+      islink="true"
+      id="TrainFlow11"
+      from="View3"
+      to="View10">
+      <property
+         name="sdm:polyPoints">R50,720.0,207.5459,777.0,208.24707,L50</property>
+   </TrainFlow>
 </SDM>

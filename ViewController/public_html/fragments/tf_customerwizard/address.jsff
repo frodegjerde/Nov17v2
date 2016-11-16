@@ -53,7 +53,6 @@
                       shortDesc="#{bindings.Landnavn.hints.tooltip}" id="it6">
           <f:validator binding="#{bindings.Landnavn.validator}"/>
         </af:inputText>
-        <af:button text="Save" id="b1" action="save"/>
       </af:panelFormLayout>
     </f:facet>
   </af:decorativeBox>

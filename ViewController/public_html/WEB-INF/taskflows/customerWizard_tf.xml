@@ -26,10 +26,16 @@
         <commit/>
       </outcome>
     </task-flow-return>
+    <view id="review">
+      <page>/fragments/tf_customerwizard/review.jsff</page>
+      <train-stop>
+        <display-name>Review</display-name>
+      </train-stop>
+    </view>
     <train/>
-    <control-flow-rule id="__1">
-      <from-activity-id>address</from-activity-id>
-      <control-flow-case id="__2">
+    <control-flow-rule id="__3">
+      <from-activity-id>review</from-activity-id>
+      <control-flow-case id="__4">
         <from-outcome>save</from-outcome>
         <to-activity-id>Save</to-activity-id>
       </control-flow-case>
