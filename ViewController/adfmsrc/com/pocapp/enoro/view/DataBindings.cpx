@@ -11,12 +11,10 @@
   <pageMap>
     <page path="/untitled1.jsf" usageId="com_pocapp_enoro_view_untitled1PageDef"/>
     <page path="/fragments/tf_customer/customer.jsff" usageId="com_pocapp_enoro_view_customerPageDef"/>
-    <page path="/fragments/tf_parameter/tf_parameter.jsff" usageId="com_pocapp_enoro_view_tf_parameterPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_pocapp_enoro_view_untitled1PageDef" path="com.pocapp.enoro.view.pageDefs.untitled1PageDef"/>
     <page id="com_pocapp_enoro_view_customerPageDef" path="fragments.tf_customer.customerPageDef"/>
-    <page id="com_pocapp_enoro_view_tf_parameterPageDef" path="fragments.tf_parameter.tf_parameterPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="com.pocapp.enoro.model.am1"

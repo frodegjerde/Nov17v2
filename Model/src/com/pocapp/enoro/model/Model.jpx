@@ -20,8 +20,6 @@
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_AM" Value="true"/>
-      <Attr Name="_EO" Value="true"/>
-      <Attr Name="_VO" Value="true"/>
     </DesignTime>
   </Containee>
   <Containee
@@ -42,4 +40,12 @@
       <Attr Name="_VL" Value="true"/>
     </DesignTime>
   </Containee>
+  <Containee
+    Name="eo"
+    PackageName="com.pocapp.enoro.model.eo"
+    ObjectType="JboPackage"/>
+  <Containee
+    Name="viewlinks"
+    PackageName="com.pocapp.enoro.model.vo.viewlinks"
+    ObjectType="JboPackage"/>
 </JboProject>

@@ -5,16 +5,6 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
-    <managed-bean id="__1">
-      <managed-bean-name>findParameters</managed-bean-name>
-      <managed-bean-class>com.pocapp.enoro.view.beans</managed-bean-class>
-      <managed-bean-scope>request</managed-bean-scope>
-    </managed-bean>
-    <managed-bean id="__2">
-      <managed-bean-name>parametersBean</managed-bean-name>
-      <managed-bean-class>com.pocapp.enoro.view.beans.searchDataChanged</managed-bean-class>
-      <managed-bean-scope>pageFlow</managed-bean-scope>
-    </managed-bean>
     <view id="parameter">
       <page>/fragments/tf_parameter/tf_parameter.jsff</page>
     </view>
