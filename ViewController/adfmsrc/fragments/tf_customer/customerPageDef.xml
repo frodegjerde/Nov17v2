@@ -21,16 +21,13 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="VReskontroView2Query"/>
     <iterator Binds="VJurpersonConsumptionView2" RangeSize="-1" DataControl="AppModuleDataControl"
               id="VJurpersonConsumptionView2Iterator"/>
+    <iterator Binds="VJurpersonKontraktCntView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="VJurpersonKontraktCntView2Iterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="VJurpersonView1Iterator" id="Jurpersonid">
       <AttrNames>
         <Item Value="Jurpersonid"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="VJurpersonView1Iterator" id="Jurtype">
-      <AttrNames>
-        <Item Value="Jurtype"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="VJurpersonView1Iterator" id="Fornamn">
@@ -148,5 +145,27 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="VJurpersonKontraktCntView2Iterator" id="Straum">
+      <AttrNames>
+        <Item Value="Straum"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VJurpersonKontraktCntView2Iterator" id="Breiband">
+      <AttrNames>
+        <Item Value="Breiband"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VJurpersonKontraktCntView2Iterator" id="Videoleige">
+      <AttrNames>
+        <Item Value="Videoleige"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VJurpersonKontraktCntView2Iterator" id="Fjernvarme">
+      <AttrNames>
+        <Item Value="Fjernvarme"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="VJurpersonView1Iterator" StaticList="false" Uses="LOV_Jurtype" id="Jurtype1"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

@@ -13,6 +13,50 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="VKontraktstatusView1"
+    ViewObjectName="com.pocapp.enoro.model.am1.vo.VKontraktstatusView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="VKontraktgruppeView1"
+    ViewObjectName="com.pocapp.enoro.model.am1.vo.VKontraktgruppeView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Valstatus"
+    ListVOName="VKontraktstatusView1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Valstatus"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Valstatus"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Status"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Kontrgrnr"
+    ListVOName="VKontraktgruppeView1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Kontrgrnr"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Kontrgrnr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Kontrgrnamn"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="VKontrakt"
     Entity="com.pocapp.enoro.model.am1.eo.VKontrakt"/>
@@ -48,14 +92,30 @@
     PrecisionRule="true"
     EntityAttrName="Valstatus"
     EntityUsage="VKontrakt"
-    AliasName="VALSTATUS"/>
+    AliasName="VALSTATUS"
+    LOVName="LOV_Valstatus">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Kontrgrnr"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Kontrgrnr"
     EntityUsage="VKontrakt"
-    AliasName="KONTRGRNR"/>
+    AliasName="KONTRGRNR"
+    LOVName="LOV_Kontrgrnr">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Avrpuljenr"
     PrecisionRule="true"
