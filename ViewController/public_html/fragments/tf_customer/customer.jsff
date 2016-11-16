@@ -1,6 +1,382 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+<<<<<<
+  <af:panelSplitter id="ps1" splitterPosition="557">
+    <f:facet name="first">
+      <af:panelSplitter id="ps2" splitterPosition="159" orientation="vertical">
+        <f:facet name="first">
+          <af:panelFormLayout id="pfl1" rows="3">
+            <af:panelLabelAndMessage label="Customer No" id="plam1">
+              <af:outputText value="#{bindings.Jurpersonid.inputValue}"
+                             shortDesc="#{bindings.Jurpersonid.hints.tooltip}" id="ot1">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.Jurpersonid.format}"/>
+              </af:outputText>
+            </af:panelLabelAndMessage>
+            <af:inputText value="#{bindings.Fornamn.inputValue}" label="First name"
+                          required="#{bindings.Fornamn.hints.mandatory}"
+                          columns="#{bindings.Fornamn.hints.displayWidth}"
+                          maximumLength="#{bindings.Fornamn.hints.precision}"
+                          shortDesc="#{bindings.Fornamn.hints.tooltip}" id="it2">
+              <f:validator binding="#{bindings.Fornamn.validator}"/>
+            </af:inputText>
+            <af:inputDate value="#{bindings.Foodseldato.inputValue}" label="Birthdate"
+                          required="#{bindings.Foodseldato.hints.mandatory}"
+                          columns="#{bindings.Foodseldato.hints.displayWidth}"
+                          shortDesc="#{bindings.Foodseldato.hints.tooltip}" id="id1">
+              <f:validator binding="#{bindings.Foodseldato.validator}"/>
+              <af:convertDateTime pattern="#{bindings.Foodseldato.format}"/>
+            </af:inputDate>
+            <af:inputText value="#{bindings.Etternamn.inputValue}" label="Last name"
+                          required="#{bindings.Etternamn.hints.mandatory}"
+                          columns="#{bindings.Etternamn.hints.displayWidth}"
+                          maximumLength="#{bindings.Etternamn.hints.precision}"
+                          shortDesc="#{bindings.Etternamn.hints.tooltip}" id="it3">
+              <f:validator binding="#{bindings.Etternamn.validator}"/>
+            </af:inputText>
+            <af:selectOneChoice value="#{bindings.Jurtype1.inputValue}" label="Type"
+                                required="#{bindings.Jurtype1.hints.mandatory}"
+                                shortDesc="#{bindings.Jurtype1.hints.tooltip}" id="soc3">
+              <f:selectItems value="#{bindings.Jurtype1.items}" id="si3"/>
+              <f:validator binding="#{bindings.Jurtype1.validator}"/>
+            </af:selectOneChoice>
+            <af:inputText value="#{bindings.Foretaksnr.inputValue}" label="Org. No"
+                          required="#{bindings.Foretaksnr.hints.mandatory}"
+                          columns="#{bindings.Foretaksnr.hints.displayWidth}"
+                          maximumLength="#{bindings.Foretaksnr.hints.precision}"
+                          shortDesc="#{bindings.Foretaksnr.hints.tooltip}" id="it4">
+              <f:validator binding="#{bindings.Foretaksnr.validator}"/>
+            </af:inputText>
+            <f:facet name="footer">
+              <af:panelGroupLayout layout="vertical" id="pgl1" halign="center">
+                <af:panelGroupLayout layout="horizontal" id="pgl2">
+                  <af:button actionListener="#{bindings.First.execute}" text="First"
+                             disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b1"/>
+                  <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
+                             disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b2"/>
+                  <af:button actionListener="#{bindings.Next.execute}" text="Next" disabled="#{!bindings.Next.enabled}"
+                             partialSubmit="true" id="b3"/>
+                  <af:button actionListener="#{bindings.Last.execute}" text="Last" disabled="#{!bindings.Last.enabled}"
+                             partialSubmit="true" id="b4"/>
+                  <af:spacer width="40" height="10" id="s1"/>
+                  <af:button text="Submit" id="b5"/>
+                </af:panelGroupLayout>
+              </af:panelGroupLayout>
+            </f:facet>
+          </af:panelFormLayout>
+        </f:facet>
+        <f:facet name="second">
+          <af:panelSplitter id="ps3" splitterPosition="77" orientation="vertical">
+            <f:facet name="first">
+              <af:panelFormLayout id="pfl4" rows="2" maxColumns="2">
+                <af:panelLabelAndMessage label="Electricity" id="plam2">
+                  <af:outputText value="#{bindings.Straum.inputValue}" shortDesc="#{bindings.Straum.hints.tooltip}"
+                                 id="ot16">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Straum.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="Broadband" id="plam3" shortDesc="this is a test on mouseover">
+                  <af:outputText value="#{bindings.Breiband.inputValue}" shortDesc="#{bindings.Breiband.hints.tooltip}"
+                                 id="ot17">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Breiband.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="VoD" id="plam4">
+                  <af:outputText value="#{bindings.Videoleige.inputValue}"
+                                 shortDesc="#{bindings.Videoleige.hints.tooltip}" id="ot18">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Videoleige.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="Districtheating" id="plam5">
+                  <af:outputText value="#{bindings.Fjernvarme.inputValue}"
+                                 shortDesc="#{bindings.Fjernvarme.hints.tooltip}" id="ot19">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Fjernvarme.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+              </af:panelFormLayout>
+            </f:facet>
+            <f:facet name="second">
+              <af:panelSplitter id="ps4" orientation="vertical" splitterPosition="184">
+                <f:facet name="first">
+                  <af:panelTabbed position="above" id="pt2">
+                    <af:showDetailItem id="tab6" text="Address" disclosed="true">
+                      <af:panelFormLayout id="pfl2" rows="3">
+                        <af:inputText value="#{bindings.Adresse.inputValue}" label="Address"
+                                      required="#{bindings.Adresse.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Adresse.hints.displayWidth}"
+                                      maximumLength="#{bindings.Adresse.hints.precision}"
+                                      shortDesc="#{bindings.Adresse.hints.tooltip}" id="it5">
+                          <f:validator binding="#{bindings.Adresse.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Postnr.inputValue}" label="Zipcode"
+                                      required="#{bindings.Postnr.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Postnr.hints.displayWidth}"
+                                      maximumLength="#{bindings.Postnr.hints.precision}"
+                                      shortDesc="#{bindings.Postnr.hints.tooltip}" id="it7">
+                          <f:validator binding="#{bindings.Postnr.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Landnavn.inputValue}" label="Country"
+                                      required="#{bindings.Landnavn.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Landnavn.hints.displayWidth}"
+                                      maximumLength="#{bindings.Landnavn.hints.precision}"
+                                      shortDesc="#{bindings.Landnavn.hints.tooltip}" id="it9">
+                          <f:validator binding="#{bindings.Landnavn.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Postboksnr.inputValue}" label="PBox"
+                                      required="#{bindings.Postboksnr.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Postboksnr.hints.displayWidth}"
+                                      maximumLength="#{bindings.Postboksnr.hints.precision}"
+                                      shortDesc="#{bindings.Postboksnr.hints.tooltip}" id="it6">
+                          <f:validator binding="#{bindings.Postboksnr.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Postboksnr.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Poststad.inputValue}" label="City"
+                                      required="#{bindings.Poststad.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Poststad.hints.displayWidth}"
+                                      maximumLength="#{bindings.Poststad.hints.precision}"
+                                      shortDesc="#{bindings.Poststad.hints.tooltip}" id="it8">
+                          <f:validator binding="#{bindings.Poststad.validator}"/>
+                        </af:inputText>
+                      </af:panelFormLayout>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab7" text="Contact">
+                      <af:button text="Not Implemented" id="b6"/>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab8" text="Financial">
+                      <af:panelFormLayout id="pfl3" rows="3">
+                        <af:inputText value="#{bindings.Kundesaldo.inputValue}" label="Balance"
+                                      required="#{bindings.Kundesaldo.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Kundesaldo.hints.displayWidth}"
+                                      maximumLength="#{bindings.Kundesaldo.hints.precision}"
+                                      shortDesc="#{bindings.Kundesaldo.hints.tooltip}" id="it10">
+                          <f:validator binding="#{bindings.Kundesaldo.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Kundesaldo.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Kundeinkasso.inputValue}" label="Debtcollection"
+                                      required="#{bindings.Kundeinkasso.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Kundeinkasso.hints.displayWidth}"
+                                      maximumLength="#{bindings.Kundeinkasso.hints.precision}"
+                                      shortDesc="#{bindings.Kundeinkasso.hints.tooltip}" id="it11">
+                          <f:validator binding="#{bindings.Kundeinkasso.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Kundeinkasso.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Kundeavskriving.inputValue}" label="Write-off"
+                                      required="#{bindings.Kundeavskriving.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Kundeavskriving.hints.displayWidth}"
+                                      maximumLength="#{bindings.Kundeavskriving.hints.precision}"
+                                      shortDesc="#{bindings.Kundeavskriving.hints.tooltip}" id="it12">
+                          <f:validator binding="#{bindings.Kundeavskriving.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Kundeavskriving.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Kredittvurdering.inputValue}" label="Credit score"
+                                      required="#{bindings.Kredittvurdering.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Kredittvurdering.hints.displayWidth}"
+                                      maximumLength="#{bindings.Kredittvurdering.hints.precision}"
+                                      shortDesc="#{bindings.Kredittvurdering.hints.tooltip}" id="it13">
+                          <f:validator binding="#{bindings.Kredittvurdering.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Internrating.inputValue}" label="Internal credit score"
+                                      required="#{bindings.Internrating.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Internrating.hints.displayWidth}"
+                                      maximumLength="#{bindings.Internrating.hints.precision}"
+                                      shortDesc="#{bindings.Internrating.hints.tooltip}" id="it14">
+                          <f:validator binding="#{bindings.Internrating.validator}"/>
+                        </af:inputText>
+                      </af:panelFormLayout>
+                    </af:showDetailItem>
+                  </af:panelTabbed>
+                </f:facet>
+                <f:facet name="second">
+                  <af:panelTabbed position="above" id="pt3">
+                    <af:showDetailItem id="tab9" text="Dialogue" disclosed="true">
+                      <af:table value="#{bindings.VJurpersonDialogueView2.collectionModel}" var="row"
+                                rows="#{bindings.VJurpersonDialogueView2.rangeSize}"
+                                emptyText="#{bindings.VJurpersonDialogueView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                rowBandingInterval="0"
+                                selectedRowKeys="#{bindings.VJurpersonDialogueView2.collectionModel.selectedRow}"
+                                selectionListener="#{bindings.VJurpersonDialogueView2.collectionModel.makeCurrent}"
+                                rowSelection="single" fetchSize="#{bindings.VJurpersonDialogueView2.rangeSize}"
+                                filterModel="#{bindings.VJurpersonDialogueView2Query.queryDescriptor}"
+                                filterVisible="true"
+                                queryListener="#{bindings.VJurpersonDialogueView2Query.processQuery}" varStatus="vs"
+                                id="t1" width="531" inlineStyle="height:295px;">
+                        <af:column sortProperty="#{bindings.VJurpersonDialogueView2.hints.Kilde.name}" filterable="true"
+                                   sortable="true" headerText="Source" id="c1" width="100">
+                          <af:outputText value="#{row.Kilde}"
+                                         shortDesc="#{bindings.VJurpersonDialogueView2.hints.Kilde.tooltip}" id="ot2"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.VJurpersonDialogueView2.hints.Loggdatotidny.name}"
+                                   filterable="true" sortable="true" headerText="Time" id="c2" width="100">
+                          <f:facet name="filter">
+                            <af:inputDate value="#{bindings.VJurpersonDialogueView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Loggdatotidny.value}"
+                                          id="id2">
+                              <af:convertDateTime pattern="#{bindings.VJurpersonDialogueView2.hints.Loggdatotidny.format}"/>
+                            </af:inputDate>
+                          </f:facet>
+                          <af:outputText value="#{row.Loggdatotidny}"
+                                         shortDesc="#{bindings.VJurpersonDialogueView2.hints.Loggdatotidny.tooltip}"
+                                         id="ot3">
+                            <af:convertDateTime pattern="#{bindings.VJurpersonDialogueView2.hints.Loggdatotidny.format}"/>
+                          </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.VJurpersonDialogueView2.hints.Emne.name}" filterable="true"
+                                   sortable="true" headerText="Subject" id="c3" width="305">
+                          <af:outputText value="#{row.Emne}"
+                                         shortDesc="#{bindings.VJurpersonDialogueView2.hints.Emne.tooltip}" id="ot4"/>
+                        </af:column>
+                      </af:table>
+                    </af:showDetailItem>
+                  </af:panelTabbed>
+                </f:facet>
+              </af:panelSplitter>
+            </f:facet>
+          </af:panelSplitter>
+        </f:facet>
+      </af:panelSplitter>
+    </f:facet>
+    <f:facet name="second">
+      <af:panelTabbed position="above" id="pt1">
+        <af:showDetailItem id="tab1" text="Contract">
+          <af:button text="Excel" id="b9">
+            <af:exportCollectionActionListener type="excelHTML" exportedId="t2" filename="exp_contracts.xls"
+                                               title="Customer contracts"/>
+          </af:button>
+          <af:table value="#{bindings.VKontraktView3.collectionModel}" var="row"
+                    rows="#{bindings.VKontraktView3.rangeSize}"
+                    emptyText="#{bindings.VKontraktView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    rowBandingInterval="0" selectedRowKeys="#{bindings.VKontraktView3.collectionModel.selectedRow}"
+                    selectionListener="#{bindings.VKontraktView3.collectionModel.makeCurrent}" rowSelection="single"
+                    fetchSize="#{bindings.VKontraktView3.rangeSize}"
+                    filterModel="#{bindings.VKontraktView3Query.queryDescriptor}" filterVisible="true"
+                    queryListener="#{bindings.VKontraktView3Query.processQuery}" varStatus="vs" id="t2">
+            <af:column sortProperty="#{bindings.VKontraktView3.hints.Kontraktnr.name}" filterable="true" sortable="true"
+                       headerText="Contract No" id="c4" width="84">
+              <af:outputText value="#{row.Kontraktnr}" shortDesc="#{bindings.VKontraktView3.hints.Kontraktnr.tooltip}"
+                             id="ot5">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView3.hints.Kontraktnr.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.VKontraktView3.hints.Maalepktnr.name}" filterable="true" sortable="true"
+                       headerText="Meteringpoint No" id="c5" width="112">
+              <af:outputText value="#{row.Maalepktnr}" shortDesc="#{bindings.VKontraktView3.hints.Maalepktnr.tooltip}"
+                             id="ot6">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView3.hints.Maalepktnr.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.VKontraktView3.hints.Resknr.name}" filterable="true" sortable="true"
+                       headerText="Ledger No" id="c6" width="80">
+              <af:outputText value="#{row.Resknr}" shortDesc="#{bindings.VKontraktView3.hints.Resknr.tooltip}" id="ot7">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView3.hints.Resknr.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.VKontraktView3.hints.Valstatus.name}" filterable="true" sortable="true"
+                       headerText="Status" id="c7" width="73">              
+              <af:selectOneChoice value="#{row.bindings.Valstatus.inputValue}" label="#{row.bindings.Valstatus.label}"
+                                  required="#{bindings.VKontraktView3.hints.Valstatus.mandatory}"
+                                  shortDesc="#{bindings.VKontraktView3.hints.Valstatus.tooltip}" id="soc2"
+                                  readOnly="true">
+                <f:selectItems value="#{row.bindings.Valstatus.items}" id="si2"/>
+                <f:validator binding="#{row.bindings.Valstatus.validator}"/>
+              </af:selectOneChoice>
+            </af:column>
+            <af:column sortProperty="#{bindings.VKontraktView3.hints.Kontrgrnr.name}" filterable="true" sortable="true"
+                       headerText="Contract Group" id="c8" width="113">
+              <af:selectOneChoice value="#{row.bindings.Kontrgrnr.inputValue}" label="#{row.bindings.Kontrgrnr.label}"
+                                  required="#{bindings.VKontraktView3.hints.Kontrgrnr.mandatory}"
+                                  shortDesc="#{bindings.VKontraktView3.hints.Kontrgrnr.tooltip}" readOnly="true"
+                                  id="soc1">
+                <f:selectItems value="#{row.bindings.Kontrgrnr.items}" id="si1"/>
+                <f:validator binding="#{row.bindings.Kontrgrnr.validator}"/>
+              </af:selectOneChoice>
+            </af:column>
+            <af:column sortProperty="#{bindings.VKontraktView3.hints.Avrpuljenr.name}" filterable="true" sortable="true"
+                       headerText="Billing Group No" id="c9" width="138">
+              <af:outputText value="#{row.Avrpuljenr}" shortDesc="#{bindings.VKontraktView3.hints.Avrpuljenr.tooltip}"
+                             id="ot10">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView3.hints.Avrpuljenr.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.VKontraktView3.hints.Kontrretur.name}" filterable="true" sortable="true"
+                       headerText="Start Date" id="c10">
+              <f:facet name="filter">
+                <af:inputDate value="#{bindings.VKontraktView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Kontrretur.value}"
+                              id="id3">
+                  <af:convertDateTime pattern="#{bindings.VKontraktView3.hints.Kontrretur.format}"/>
+                </af:inputDate>
+              </f:facet>
+              <af:outputText value="#{row.Kontrretur}" shortDesc="#{bindings.VKontraktView3.hints.Kontrretur.tooltip}"
+                             id="ot11">
+                <af:convertDateTime pattern="#{bindings.VKontraktView3.hints.Kontrretur.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.VKontraktView3.hints.Kontroppseiingdato.name}" filterable="true"
+                       sortable="true" headerText="End Date" id="c11">
+              <f:facet name="filter">
+                <af:inputDate value="#{bindings.VKontraktView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Kontroppseiingdato.value}"
+                              id="id4">
+                  <af:convertDateTime pattern="#{bindings.VKontraktView3.hints.Kontroppseiingdato.format}"/>
+                </af:inputDate>
+              </f:facet>
+              <af:outputText value="#{row.Kontroppseiingdato}"
+                             shortDesc="#{bindings.VKontraktView3.hints.Kontroppseiingdato.tooltip}" id="ot12">
+                <af:convertDateTime pattern="#{bindings.VKontraktView3.hints.Kontroppseiingdato.format}"/>
+              </af:outputText>
+            </af:column>
+          </af:table>
+        </af:showDetailItem>
+        <af:showDetailItem id="tab2" text="Ledger">
+          <af:table value="#{bindings.VReskontroView2.collectionModel}" var="row"
+                    rows="#{bindings.VReskontroView2.rangeSize}"
+                    emptyText="#{bindings.VReskontroView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    rowBandingInterval="0" selectedRowKeys="#{bindings.VReskontroView2.collectionModel.selectedRow}"
+                    selectionListener="#{bindings.VReskontroView2.collectionModel.makeCurrent}" rowSelection="single"
+                    fetchSize="#{bindings.VReskontroView2.rangeSize}"
+                    filterModel="#{bindings.VReskontroView2Query.queryDescriptor}" filterVisible="true"
+                    queryListener="#{bindings.VReskontroView2Query.processQuery}" varStatus="vs" id="t3">
+            <af:column sortProperty="#{bindings.VReskontroView2.hints.Resknr.name}" filterable="true" sortable="true"
+                       headerText="Ledger No" id="c12" width="100">
+              <af:outputText value="#{row.Resknr}" shortDesc="#{bindings.VReskontroView2.hints.Resknr.tooltip}"
+                             id="ot13">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.VReskontroView2.hints.Resknr.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.VReskontroView2.hints.Reskgrpnr.name}" filterable="true" sortable="true"
+                       headerText="Ledger Group No" id="c13" width="174">
+              <af:outputText value="#{row.Reskgrpnr}" shortDesc="#{bindings.VReskontroView2.hints.Reskgrpnr.tooltip}"
+                             id="ot14">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.VReskontroView2.hints.Reskgrpnr.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.VReskontroView2.hints.Saldo.name}" filterable="true" sortable="true"
+                       headerText="Balance" id="c14" width="110">
+              <af:outputText value="#{row.Saldo}" shortDesc="#{bindings.VReskontroView2.hints.Saldo.tooltip}" id="ot15">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.VReskontroView2.hints.Saldo.format}"/>
+              </af:outputText>
+            </af:column>
+          </af:table>
+        </af:showDetailItem>
+        <af:showDetailItem id="tab3" text="Email">
+          <af:button text="Not Implemented" id="b7"/>
+        </af:showDetailItem>
+        <af:showDetailItem id="tab4" text="SMS">
+          <af:button text="Not Implemented" id="b8"/>
+        </af:showDetailItem>
+        <af:showDetailItem id="sdi1" text="Roles &amp; Relations">
+          <af:button text="Not Implemented" id="b10"/>
+        </af:showDetailItem>
+        <af:showDetailItem id="tab5" text="Consumption">
+          <dvt:barChart orientation="vertical" id="barChart1" var="row"
+                        value="#{bindings.VJurpersonConsumptionView2.collectionModel}" inlineStyle="width:566px;">
+            <dvt:chartLegend rendered="false" id="cl1"/>
+            <f:facet name="dataStamp">
+              <dvt:chartDataItem id="di1" series="#{bindings.VJurpersonConsumptionView2.hints.Consumption.label}"
+                                 value="#{row.Consumption}" group="#{row.Week}"/>
+            </f:facet>
+          </dvt:barChart>
+        </af:showDetailItem>
+      </af:panelTabbed>
+    </f:facet>
+  </af:panelSplitter>< HEAD
   <af:panelSplitter id="ps1" splitterPosition="557">
     <f:facet name="first">
       <af:panelSplitter id="ps2" splitterPosition="159" orientation="vertical">
