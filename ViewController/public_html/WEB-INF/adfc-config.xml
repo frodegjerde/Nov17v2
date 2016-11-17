@@ -5,4 +5,14 @@
     <managed-bean-class>com.pocapp.enoro.view.beans.NavigationBean</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
+   <managed-bean id="__2">
+      <managed-bean-name>languageBean</managed-bean-name>
+      <managed-bean-class>com.pocapp.enoro.view.beans.LanguageBean</managed-bean-class>
+      <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>loginBean</managed-bean-name>
+    <managed-bean-class>com.pocapp.enoro.view.beans.LoginBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

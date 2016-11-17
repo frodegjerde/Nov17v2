@@ -26,6 +26,12 @@
         <commit/>
       </outcome>
     </task-flow-return>
+    <view id="Products">
+      <page>/fragments/tf_customerwizard/Products.jsff</page>
+      <train-stop>
+        <display-name>Products</display-name>
+      </train-stop>
+    </view>
     <view id="review">
       <page>/fragments/tf_customerwizard/review.jsff</page>
       <train-stop>

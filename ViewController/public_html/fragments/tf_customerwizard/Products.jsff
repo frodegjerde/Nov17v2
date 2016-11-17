@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+  <af:decorativeBox id="db1">
+    <f:facet name="top">
+      <h:panelGroup id="pg1">
+        <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
+      </h:panelGroup>
+    </f:facet>
+    <f:facet name="center">
+      <af:listView value="#{bindings.VProductView2.collectionModel}" var="item"
+                   emptyText="#{bindings.VProductView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                   fetchSize="#{bindings.VProductView2.rangeSize}" id="lv1">
+        <af:listItem id="li1">
+          <af:panelGroupLayout layout="horizontal" id="pgl1">
+            <f:facet name="separator">
+              <af:spacer width="10" id="s1"/>
+            </f:facet>
+            <af:outputFormatted value="#{item.bindings.Productnr.inputValue}" id="of1">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.VProductView2.hints.Productnr.format}"/>
+            </af:outputFormatted>
+            <af:outputFormatted value="#{item.bindings.Productid.inputValue}" id="of2"/>
+            <af:outputFormatted value="#{item.bindings.Productgrpnr.inputValue}" id="of3">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.VProductView2.hints.Productgrpnr.format}"/>
+            </af:outputFormatted>
+            <af:outputFormatted value="#{item.bindings.Productname.inputValue}" id="of4"/>
+            <af:outputFormatted value="#{item.bindings.Contracttypeno.inputValue}" id="of5">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.VProductView2.hints.Contracttypeno.format}"/>
+            </af:outputFormatted>
+          </af:panelGroupLayout>
+        </af:listItem>
+      </af:listView>
+    </f:facet>
+  </af:decorativeBox>
+</ui:composition>

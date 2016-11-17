@@ -1,4 +1,160 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:button text="button 1" id="b1"/>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelAccordion discloseMany="false" id="pa1" discloseNone="true">
+
+    <af:showDetailItem id="pane1" text="Installcode">
+      <af:table value="#{bindings.VInstallcodeFullView1.collectionModel}" var="row"
+                rows="#{bindings.VInstallcodeFullView1.rangeSize}"
+                emptyText="#{bindings.VInstallcodeFullView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                rowBandingInterval="0" selectedRowKeys="#{bindings.VInstallcodeFullView1.collectionModel.selectedRow}"
+                selectionListener="#{bindings.VInstallcodeFullView1.collectionModel.makeCurrent}" rowSelection="single"
+                fetchSize="#{bindings.VInstallcodeFullView1.rangeSize}"
+                filterModel="#{bindings.VInstallcodeFullView1Query.queryDescriptor}" filterVisible="true"
+                queryListener="#{bindings.VInstallcodeFullView1Query.processQuery}" varStatus="vs" id="t4">
+        <af:column sortProperty="#{bindings.VInstallcodeFullView1.hints.Installcodeid.name}" filterable="true"
+                   sortable="true" headerText="#{bindings.VInstallcodeFullView1.hints.Installcodeid.label}" id="c7">
+          <af:inputText value="#{row.bindings.Installcodeid.inputValue}"
+                        label="#{bindings.VInstallcodeFullView1.hints.Installcodeid.label}"
+                        required="#{bindings.VInstallcodeFullView1.hints.Installcodeid.mandatory}"
+                        columns="#{bindings.VInstallcodeFullView1.hints.Installcodeid.displayWidth}"
+                        maximumLength="#{bindings.VInstallcodeFullView1.hints.Installcodeid.precision}"
+                        shortDesc="#{bindings.VInstallcodeFullView1.hints.Installcodeid.tooltip}" id="it7">
+            <f:validator binding="#{row.bindings.Installcodeid.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.VInstallcodeFullView1.hints.Installcodeid.format}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.VInstallcodeFullView1.hints.Installcodename.name}" filterable="true"
+                   sortable="true" headerText="#{bindings.VInstallcodeFullView1.hints.Installcodename.label}" id="c8">
+          <af:inputText value="#{row.bindings.Installcodename.inputValue}"
+                        label="#{bindings.VInstallcodeFullView1.hints.Installcodename.label}"
+                        required="#{bindings.VInstallcodeFullView1.hints.Installcodename.mandatory}"
+                        columns="#{bindings.VInstallcodeFullView1.hints.Installcodename.displayWidth}"
+                        maximumLength="#{bindings.VInstallcodeFullView1.hints.Installcodename.precision}"
+                        shortDesc="#{bindings.VInstallcodeFullView1.hints.Installcodename.tooltip}" id="it8">
+            <f:validator binding="#{row.bindings.Installcodename.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.VInstallcodeFullView1.hints.Installcodealias.name}" filterable="true"
+                   sortable="true" headerText="#{bindings.VInstallcodeFullView1.hints.Installcodealias.label}" id="c9">
+          <af:inputText value="#{row.bindings.Installcodealias.inputValue}"
+                        label="#{bindings.VInstallcodeFullView1.hints.Installcodealias.label}"
+                        required="#{bindings.VInstallcodeFullView1.hints.Installcodealias.mandatory}"
+                        columns="#{bindings.VInstallcodeFullView1.hints.Installcodealias.displayWidth}"
+                        maximumLength="#{bindings.VInstallcodeFullView1.hints.Installcodealias.precision}"
+                        shortDesc="#{bindings.VInstallcodeFullView1.hints.Installcodealias.tooltip}" id="it9">
+            <f:validator binding="#{row.bindings.Installcodealias.validator}"/>
+          </af:inputText>
+        </af:column>
+      </af:table>
+    </af:showDetailItem>
+    <af:showDetailItem id="pane2" text="Kontakttype">
+      <af:table value="#{bindings.VKontakttypeFullView1.collectionModel}" var="row"
+                rows="#{bindings.VKontakttypeFullView1.rangeSize}"
+                emptyText="#{bindings.VKontakttypeFullView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                rowBandingInterval="0" selectedRowKeys="#{bindings.VKontakttypeFullView1.collectionModel.selectedRow}"
+                selectionListener="#{bindings.VKontakttypeFullView1.collectionModel.makeCurrent}" rowSelection="single"
+                fetchSize="#{bindings.VKontakttypeFullView1.rangeSize}"
+                filterModel="#{bindings.VKontakttypeFullView1Query.queryDescriptor}" filterVisible="true"
+                queryListener="#{bindings.VKontakttypeFullView1Query.processQuery}" varStatus="vs" id="t3">
+        <af:column sortProperty="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.name}" filterable="true"
+                   sortable="true" headerText="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.label}" id="c5">
+          <af:inputText value="#{row.bindings.Kontakttypenr.inputValue}"
+                        label="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.label}"
+                        required="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.mandatory}"
+                        columns="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.displayWidth}"
+                        maximumLength="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.precision}"
+                        shortDesc="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.tooltip}" id="it5">
+            <f:validator binding="#{row.bindings.Kontakttypenr.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.format}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.VKontakttypeFullView1.hints.Kontakttypenamn.name}" filterable="true"
+                   sortable="true" headerText="#{bindings.VKontakttypeFullView1.hints.Kontakttypenamn.label}" id="c6">
+          <af:inputText value="#{row.bindings.Kontakttypenamn.inputValue}"
+                        label="#{bindings.VKontakttypeFullView1.hints.Kontakttypenamn.label}"
+                        required="#{bindings.VKontakttypeFullView1.hints.Kontakttypenamn.mandatory}"
+                        columns="#{bindings.VKontakttypeFullView1.hints.Kontakttypenamn.displayWidth}"
+                        maximumLength="#{bindings.VKontakttypeFullView1.hints.Kontakttypenamn.precision}"
+                        shortDesc="#{bindings.VKontakttypeFullView1.hints.Kontakttypenamn.tooltip}" id="it6">
+            <f:validator binding="#{row.bindings.Kontakttypenamn.validator}"/>
+          </af:inputText>
+        </af:column>
+      </af:table>
+    </af:showDetailItem>
+    <af:showDetailItem id="pane3" text="KontraktImportstatus">
+      <af:table value="#{bindings.VKontrimportstatusFullView1.collectionModel}" var="row"
+                rows="#{bindings.VKontrimportstatusFullView1.rangeSize}"
+                emptyText="#{bindings.VKontrimportstatusFullView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                rowBandingInterval="0"
+                selectedRowKeys="#{bindings.VKontrimportstatusFullView1.collectionModel.selectedRow}"
+                selectionListener="#{bindings.VKontrimportstatusFullView1.collectionModel.makeCurrent}"
+                rowSelection="single" fetchSize="#{bindings.VKontrimportstatusFullView1.rangeSize}"
+                filterModel="#{bindings.VKontrimportstatusFullView1Query.queryDescriptor}" filterVisible="true"
+                queryListener="#{bindings.VKontrimportstatusFullView1Query.processQuery}" varStatus="vs" id="t1">
+        <af:column sortProperty="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.name}" filterable="true"
+                   sortable="true" headerText="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.label}"
+                   id="c1">
+          <af:inputText value="#{row.bindings.Importstatusnr.inputValue}"
+                        label="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.label}"
+                        required="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.mandatory}"
+                        columns="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.displayWidth}"
+                        maximumLength="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.precision}"
+                        shortDesc="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.tooltip}" id="it1">
+            <f:validator binding="#{row.bindings.Importstatusnr.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.format}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnamn.name}" filterable="true"
+                   sortable="true" headerText="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnamn.label}"
+                   id="c2">
+          <af:inputText value="#{row.bindings.Importstatusnamn.inputValue}"
+                        label="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnamn.label}"
+                        required="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnamn.mandatory}"
+                        columns="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnamn.displayWidth}"
+                        maximumLength="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnamn.precision}"
+                        shortDesc="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnamn.tooltip}" id="it2">
+            <f:validator binding="#{row.bindings.Importstatusnamn.validator}"/>
+          </af:inputText>
+        </af:column>
+      </af:table>
+    </af:showDetailItem>    
+    <af:showDetailItem id="pane4" text="Kontotype">
+      <af:table value="#{bindings.VKontotypeFullView1.collectionModel}" var="row"
+                rows="#{bindings.VKontotypeFullView1.rangeSize}"
+                emptyText="#{bindings.VKontotypeFullView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                rowBandingInterval="0" selectedRowKeys="#{bindings.VKontotypeFullView1.collectionModel.selectedRow}"
+                selectionListener="#{bindings.VKontotypeFullView1.collectionModel.makeCurrent}" rowSelection="single"
+                fetchSize="#{bindings.VKontotypeFullView1.rangeSize}"
+                filterModel="#{bindings.VKontotypeFullView1Query.queryDescriptor}" filterVisible="true"
+                queryListener="#{bindings.VKontotypeFullView1Query.processQuery}" varStatus="vs" id="t2">
+        <af:column sortProperty="#{bindings.VKontotypeFullView1.hints.Kontotype.name}" filterable="true" sortable="true"
+                   headerText="#{bindings.VKontotypeFullView1.hints.Kontotype.label}" id="c3">
+          <af:inputText value="#{row.bindings.Kontotype.inputValue}"
+                        label="#{bindings.VKontotypeFullView1.hints.Kontotype.label}"
+                        required="#{bindings.VKontotypeFullView1.hints.Kontotype.mandatory}"
+                        columns="#{bindings.VKontotypeFullView1.hints.Kontotype.displayWidth}"
+                        maximumLength="#{bindings.VKontotypeFullView1.hints.Kontotype.precision}"
+                        shortDesc="#{bindings.VKontotypeFullView1.hints.Kontotype.tooltip}" id="it3">
+            <f:validator binding="#{row.bindings.Kontotype.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontotypeFullView1.hints.Kontotype.format}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.VKontotypeFullView1.hints.Kontotypenavn.name}" filterable="true"
+                   sortable="true" headerText="#{bindings.VKontotypeFullView1.hints.Kontotypenavn.label}" id="c4">
+          <af:inputText value="#{row.bindings.Kontotypenavn.inputValue}"
+                        label="#{bindings.VKontotypeFullView1.hints.Kontotypenavn.label}"
+                        required="#{bindings.VKontotypeFullView1.hints.Kontotypenavn.mandatory}"
+                        columns="#{bindings.VKontotypeFullView1.hints.Kontotypenavn.displayWidth}"
+                        maximumLength="#{bindings.VKontotypeFullView1.hints.Kontotypenavn.precision}"
+                        shortDesc="#{bindings.VKontotypeFullView1.hints.Kontotypenavn.tooltip}" id="it4">
+            <f:validator binding="#{row.bindings.Kontotypenavn.validator}"/>
+          </af:inputText>
+        </af:column>
+      </af:table>
+    </af:showDetailItem>
+  </af:panelAccordion>
 </ui:composition>
