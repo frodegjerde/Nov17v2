@@ -5,7 +5,7 @@
   <c:set var="viewcontrollerBundle" value="#{adfBundle['com.pocapp.enoro.view.resources.tf_customerBundle']}"/>
   <af:panelSplitter id="ps1" splitterPosition="582">
     <f:facet name="first">
-      <af:panelSplitter id="ps2" splitterPosition="159" orientation="vertical">
+      <af:panelSplitter id="ps2" splitterPosition="161" orientation="vertical">
         <f:facet name="first">
           <af:panelFormLayout id="pfl1" rows="3">
             <af:inputText value="#{bindings.Jurpersonid.inputValue}" label="#{viewcontrollerBundle.CUSTOMER_NO}"
@@ -69,7 +69,7 @@
           </af:panelFormLayout>
         </f:facet>
         <f:facet name="second">
-          <af:panelSplitter id="ps3" splitterPosition="77" orientation="vertical">
+          <af:panelSplitter id="ps3" splitterPosition="86" orientation="vertical">
             <f:facet name="first">
               <af:panelFormLayout id="pfl4" rows="2" maxColumns="2">
                 <af:panelLabelAndMessage label="Electricity" id="plam2">
@@ -108,7 +108,8 @@
                                       required="#{bindings.Adresse.hints.mandatory}" readOnly="true"
                                       columns="#{bindings.Adresse.hints.displayWidth}"
                                       maximumLength="#{bindings.Adresse.hints.precision}"
-                                      shortDesc="#{bindings.Adresse.hints.tooltip}" id="it5">
+                                      shortDesc="#{bindings.Adresse.hints.tooltip}" id="it5"
+                                      secret="#{securityContext.userName eq 'frode'}">
                           <f:validator binding="#{bindings.Adresse.validator}"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.Postnr.inputValue}" label="Zipcode"
@@ -145,7 +146,8 @@
                     <af:showDetailItem id="tab7" text="Contact">
                       <af:button text="Not Implemented" id="b6"/>
                     </af:showDetailItem>
-                    <af:showDetailItem id="tab8" text="Financial">
+                    <af:showDetailItem id="tab8" text="Financial"
+                                       visible="#{securityContext.userName eq 'frode'}">
                       <af:panelFormLayout id="pfl3" rows="3">
                         <af:inputText value="#{bindings.Kundesaldo.inputValue}" label="Balance"
                                       required="#{bindings.Kundesaldo.hints.mandatory}" readOnly="true"
@@ -241,7 +243,13 @@
       <af:panelTabbed position="above" id="pt1">
         <af:showDetailItem id="tab1" text="Contract">
           <af:panelCollection id="pc1" inlineStyle="width:663px; height:174px;">
-            <f:facet name="menus"/>
+            <f:facet name="menus">
+              <af:menu text="Menu" id="m1">
+                <af:commandMenuItem text="Export to Excel" id="cmi1">
+                  <af:exportCollectionActionListener type="excelHTML" exportedId="t4" filename="tmp_export.xls"/>
+                </af:commandMenuItem>
+              </af:menu>
+            </f:facet>
             <f:facet name="toolbar"/>
             <f:facet name="statusbar"/>
             <af:table value="#{bindings.VKontraktView31.collectionModel}" var="row"

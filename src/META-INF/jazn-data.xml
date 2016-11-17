@@ -11,6 +11,16 @@
                     <credentials>{903}+P9tjRJpiA7BhhTn9SRf6TQ41Z1MHFfW</credentials>
                     <description>welcome1</description>
                 </user>
+                <user>
+                    <name>frode</name>
+                    <description>welcome1</description>
+                    <credentials>{903}A8IkuTU25gVqGVebOdPv73jQa5PVfVQ2</credentials>
+                </user>
+                <user>
+                    <name>arvid</name>
+                    <credentials>{903}FPKWbh6tMH4Cj72YlMHDH1vbRgPSEOID</credentials>
+                    <description>welcome1</description>
+                </user>
             </users>
             <roles>
                 <role>
@@ -20,7 +30,20 @@
                             <type>user</type>
                             <name>user1</name>
                         </member>
+                        <member>
+                            <type>user</type>
+                            <name>arvid</name>
+                        </member>
+                        <member>
+                            <type>user</type>
+                            <name>frode</name>
+                        </member>
                     </members>
+                    <display-name></display-name>
+                </role>
+                <role>
+                    <name>ViewFinancialInformation</name>
+                    <display-name>ViewFinancialInformation</display-name>
                 </role>
             </roles>
         </realm>
@@ -47,6 +70,21 @@
                                 <name>EnoroEnterpriseRole</name>
                             </member>
                         </members>
+                    </app-role>
+                    <app-role>
+                        <name>ViewSecret</name>
+                        <class>oracle.security.jps.service.policystore.ApplicationRole</class>
+                        <members>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsAuthenticatedRoleImpl</class>
+                                <name>authenticated-role</name>
+                            </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>frode</name>
+                            </member>
+                        </members>
+                        <display-name>ViewSecret</display-name>
                     </app-role>
                 </app-roles>
                 <jazn-policy>
