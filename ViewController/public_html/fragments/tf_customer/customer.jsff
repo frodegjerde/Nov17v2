@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:f="http://java.sun.com/jsf/core" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+  <c:set var="viewcontrollerBundle" value="#{adfBundle['com.pocapp.enoro.view.resources.tf_customerBundle']}"/>
   <af:panelSplitter id="ps1" splitterPosition="582">
     <f:facet name="first">
       <af:panelSplitter id="ps2" splitterPosition="159" orientation="vertical">
         <f:facet name="first">
           <af:panelFormLayout id="pfl1" rows="3">
-            <af:inputText value="#{bindings.Jurpersonid.inputValue}" label="#{bindings.Jurpersonid.hints.label}"
+            <af:inputText value="#{bindings.Jurpersonid.inputValue}" label="#{viewcontrollerBundle.CUSTOMER_NO}"
                           required="#{bindings.Jurpersonid.hints.mandatory}"
                           columns="#{bindings.Jurpersonid.hints.displayWidth}"
                           maximumLength="#{bindings.Jurpersonid.hints.precision}"
@@ -14,34 +16,34 @@
               <f:validator binding="#{bindings.Jurpersonid.validator}"/>
               <af:convertNumber groupingUsed="false" pattern="#{bindings.Jurpersonid.format}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.Fornamn.inputValue}" label="#{bindings.Fornamn.hints.label}"
+            <af:inputText value="#{bindings.Fornamn.inputValue}" label="#{viewcontrollerBundle.FIRST_NAME}"
                           required="#{bindings.Fornamn.hints.mandatory}"
                           columns="#{bindings.Fornamn.hints.displayWidth}"
                           maximumLength="#{bindings.Fornamn.hints.precision}"
                           shortDesc="#{bindings.Fornamn.hints.tooltip}" id="it2">
               <f:validator binding="#{bindings.Fornamn.validator}"/>
             </af:inputText>
-            <af:inputDate value="#{bindings.Foodseldato.inputValue}" label="#{bindings.Foodseldato.hints.label}"
+            <af:inputDate value="#{bindings.Foodseldato.inputValue}" label="#{viewcontrollerBundle.BIRTHDATE}"
                           required="#{bindings.Foodseldato.hints.mandatory}"
                           columns="#{bindings.Foodseldato.hints.displayWidth}"
                           shortDesc="#{bindings.Foodseldato.hints.tooltip}" id="id1">
               <f:validator binding="#{bindings.Foodseldato.validator}"/>
               <af:convertDateTime pattern="#{bindings.Foodseldato.format}"/>
             </af:inputDate>
-            <af:selectOneChoice value="#{bindings.Jurtype.inputValue}" label="#{bindings.Jurtype.label}"
+            <af:selectOneChoice value="#{bindings.Jurtype.inputValue}" label="#{viewcontrollerBundle.TYPE}"
                                 required="#{bindings.Jurtype.hints.mandatory}"
                                 shortDesc="#{bindings.Jurtype.hints.tooltip}" id="soc3">
               <f:selectItems value="#{bindings.Jurtype.items}" id="si3"/>
               <f:validator binding="#{bindings.Jurtype.validator}"/>
             </af:selectOneChoice>
-            <af:inputText value="#{bindings.Etternamn.inputValue}" label="#{bindings.Etternamn.hints.label}"
+            <af:inputText value="#{bindings.Etternamn.inputValue}" label="#{viewcontrollerBundle.LAST_NAME}"
                           required="#{bindings.Etternamn.hints.mandatory}"
                           columns="#{bindings.Etternamn.hints.displayWidth}"
                           maximumLength="#{bindings.Etternamn.hints.precision}"
                           shortDesc="#{bindings.Etternamn.hints.tooltip}" id="it3">
               <f:validator binding="#{bindings.Etternamn.validator}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.Foretaksnr.inputValue}" label="#{bindings.Foretaksnr.hints.label}"
+            <af:inputText value="#{bindings.Foretaksnr.inputValue}" label="#{viewcontrollerBundle.ORG_NO}"
                           required="#{bindings.Foretaksnr.hints.mandatory}"
                           columns="#{bindings.Foretaksnr.hints.displayWidth}"
                           maximumLength="#{bindings.Foretaksnr.hints.precision}"
