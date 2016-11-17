@@ -32,4 +32,16 @@ public class NavigationBean implements Serializable {
         setDynamicTaskFlowId("/WEB-INF/taskflows/parameter_ts.xml#parameter_ts");
         return null;
     }
+    
+    public void setCurrentDisclosedTF(String value){
+        if (value.equals("cWizard")){
+            customerWizard_tf();
+        } 
+        if (value.equals("customers")){
+            customer_tf();
+        }
+        if (value.equals("params")){
+            parameter_ts();
+        }     
+    }
 }
