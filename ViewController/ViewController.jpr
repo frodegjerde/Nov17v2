@@ -308,7 +308,27 @@
             <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="oracle.adf.model.adapter.rest.RestURLDataControl Library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Rest Data Control"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
+      <hash n="internalDefinitions">
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url path="../.adf/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="oracle.adf.model.adapter.rest.RestURLDataControl Library"/>
+               <value n="id" v="oracle.adf.model.adapter.rest.RestURLDataControl Library"/>
+            </hash>
+         </list>
+      </hash>
       <list n="libraryReferences">
          <hash>
             <value n="id" v="JSP Runtime"/>
@@ -428,6 +448,14 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Oracle Domains"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="oracle.adf.model.adapter.rest.RestURLDataControl Library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Rest Data Control"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

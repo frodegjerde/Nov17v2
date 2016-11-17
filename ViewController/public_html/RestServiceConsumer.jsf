@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="RestServiceConsumer.jsf" id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:panelGridLayout id="pgl1">
+        <af:gridRow marginTop="5px" height="auto" id="gr1">
+          <af:gridCell marginStart="5px" width="auto" id="gc1">
+            <af:panelFormLayout id="pfl1">
+              <af:inputText value="#{bindings.customerId.inputValue}" label="Kundenummer:"
+                            required="#{bindings.customerId.hints.mandatory}"
+                            columns="#{bindings.customerId.hints.displayWidth}"
+                            maximumLength="#{bindings.customerId.hints.precision}"
+                            shortDesc="#{bindings.customerId.hints.tooltip}" id="it1">
+                <f:validator binding="#{bindings.customerId.validator}"/>
+              </af:inputText>
+              <af:button actionListener="#{bindings.getCustomer.execute}" text="getCustomer"
+                         disabled="#{!bindings.getCustomer.enabled}" id="b1"/>
+            </af:panelFormLayout>
+          </af:gridCell>
+          <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc2"/>
+        </af:gridRow>
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+          <af:gridCell marginStart="5px" width="auto" id="gc3">
+            <af:panelFormLayout id="pfl2">
+              <af:inputText value="#{bindings.CustomerId.inputValue}" label="Kundenummer:"
+                            required="#{bindings.CustomerId.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.CustomerId.hints.displayWidth}"
+                            maximumLength="#{bindings.CustomerId.hints.precision}"
+                            shortDesc="#{bindings.CustomerId.hints.tooltip}" id="it2">
+                <f:validator binding="#{bindings.CustomerId.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerId.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.CustomerType.inputValue}" label="Kundetype:"
+                            required="#{bindings.CustomerType.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.CustomerType.hints.displayWidth}"
+                            maximumLength="#{bindings.CustomerType.hints.precision}"
+                            shortDesc="#{bindings.CustomerType.hints.tooltip}" id="it3">
+                <f:validator binding="#{bindings.CustomerType.validator}"/>
+              </af:inputText>
+              <af:inputDate value="#{bindings.BirthDate.inputValue}" readOnly="true"
+                            label="Fødselsdato:" required="#{bindings.BirthDate.hints.mandatory}"
+                            columns="#{bindings.BirthDate.hints.displayWidth}"
+                            shortDesc="#{bindings.BirthDate.hints.tooltip}" id="id1">
+                <f:validator binding="#{bindings.BirthDate.validator}"/>
+                <af:convertDateTime pattern="#{bindings.BirthDate.format}"/>
+              </af:inputDate>
+              <af:inputText value="#{bindings.Email.inputValue}" label="Epost:"
+                            required="#{bindings.Email.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.Email.hints.displayWidth}"
+                            maximumLength="#{bindings.Email.hints.precision}"
+                            shortDesc="#{bindings.Email.hints.tooltip}" id="it4">
+                <f:validator binding="#{bindings.Email.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.FirstName.inputValue}" label="Fornavn:"
+                            required="#{bindings.FirstName.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.FirstName.hints.displayWidth}"
+                            maximumLength="#{bindings.FirstName.hints.precision}"
+                            shortDesc="#{bindings.FirstName.hints.tooltip}" id="it5">
+                <f:validator binding="#{bindings.FirstName.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.LastName.inputValue}" label="Etternavn:"
+                            required="#{bindings.LastName.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.LastName.hints.displayWidth}"
+                            maximumLength="#{bindings.LastName.hints.precision}"
+                            shortDesc="#{bindings.LastName.hints.tooltip}" id="it10">
+                <f:validator binding="#{bindings.LastName.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.MobileNumber.inputValue}" label="Mobil:"
+                            required="#{bindings.MobileNumber.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.MobileNumber.hints.displayWidth}"
+                            maximumLength="#{bindings.MobileNumber.hints.precision}"
+                            shortDesc="#{bindings.MobileNumber.hints.tooltip}" id="it11">
+                <f:validator binding="#{bindings.MobileNumber.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.PhoneNumber.inputValue}" label="Telefon:"
+                            required="#{bindings.PhoneNumber.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.PhoneNumber.hints.displayWidth}"
+                            maximumLength="#{bindings.PhoneNumber.hints.precision}"
+                            shortDesc="#{bindings.PhoneNumber.hints.tooltip}" id="it13">
+                <f:validator binding="#{bindings.PhoneNumber.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.AddressText.inputValue}" label="#{bindings.AddressText.hints.label}"
+                            required="#{bindings.AddressText.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.AddressText.hints.displayWidth}"
+                            maximumLength="#{bindings.AddressText.hints.precision}"
+                            shortDesc="#{bindings.AddressText.hints.tooltip}" id="it16">
+                <f:validator binding="#{bindings.AddressText.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
+                            required="#{bindings.City.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.City.hints.displayWidth}"
+                            maximumLength="#{bindings.City.hints.precision}" shortDesc="#{bindings.City.hints.tooltip}"
+                            id="it17">
+                <f:validator binding="#{bindings.City.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.CoAddress.inputValue}" label="#{bindings.CoAddress.hints.label}"
+                            required="#{bindings.CoAddress.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.CoAddress.hints.displayWidth}"
+                            maximumLength="#{bindings.CoAddress.hints.precision}"
+                            shortDesc="#{bindings.CoAddress.hints.tooltip}" id="it18">
+                <f:validator binding="#{bindings.CoAddress.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.CountryCode.inputValue}" label="#{bindings.CountryCode.hints.label}"
+                            required="#{bindings.CountryCode.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.CountryCode.hints.displayWidth}"
+                            maximumLength="#{bindings.CountryCode.hints.precision}"
+                            shortDesc="#{bindings.CountryCode.hints.tooltip}" id="it19">
+                <f:validator binding="#{bindings.CountryCode.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.Entrance.inputValue}" label="#{bindings.Entrance.hints.label}"
+                            required="#{bindings.Entrance.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.Entrance.hints.displayWidth}"
+                            maximumLength="#{bindings.Entrance.hints.precision}"
+                            shortDesc="#{bindings.Entrance.hints.tooltip}" id="it20">
+                <f:validator binding="#{bindings.Entrance.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.Floor.inputValue}" label="#{bindings.Floor.hints.label}"
+                            required="#{bindings.Floor.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.Floor.hints.displayWidth}"
+                            maximumLength="#{bindings.Floor.hints.precision}"
+                            shortDesc="#{bindings.Floor.hints.tooltip}" id="it21">
+                <f:validator binding="#{bindings.Floor.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.HouseLetter.inputValue}" label="#{bindings.HouseLetter.hints.label}"
+                            required="#{bindings.HouseLetter.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.HouseLetter.hints.displayWidth}"
+                            maximumLength="#{bindings.HouseLetter.hints.precision}"
+                            shortDesc="#{bindings.HouseLetter.hints.tooltip}" id="it22">
+                <f:validator binding="#{bindings.HouseLetter.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.HouseNo.inputValue}" label="#{bindings.HouseNo.hints.label}"
+                            required="#{bindings.HouseNo.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.HouseNo.hints.displayWidth}"
+                            maximumLength="#{bindings.HouseNo.hints.precision}"
+                            shortDesc="#{bindings.HouseNo.hints.tooltip}" id="it23">
+                <f:validator binding="#{bindings.HouseNo.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.IsEditable.inputValue}" label="#{bindings.IsEditable.hints.label}"
+                            required="#{bindings.IsEditable.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.IsEditable.hints.displayWidth}"
+                            maximumLength="#{bindings.IsEditable.hints.precision}"
+                            shortDesc="#{bindings.IsEditable.hints.tooltip}" id="it24">
+                <f:validator binding="#{bindings.IsEditable.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.POBox.inputValue}" label="#{bindings.POBox.hints.label}"
+                            required="#{bindings.POBox.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.POBox.hints.displayWidth}"
+                            maximumLength="#{bindings.POBox.hints.precision}"
+                            shortDesc="#{bindings.POBox.hints.tooltip}" id="it25">
+                <f:validator binding="#{bindings.POBox.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.POBox.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.Zipcode.inputValue}" label="#{bindings.Zipcode.hints.label}"
+                            required="#{bindings.Zipcode.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.Zipcode.hints.displayWidth}"
+                            maximumLength="#{bindings.Zipcode.hints.precision}"
+                            shortDesc="#{bindings.Zipcode.hints.tooltip}" id="it26">
+                <f:validator binding="#{bindings.Zipcode.validator}"/>
+              </af:inputText>
+            </af:panelFormLayout>
+          </af:gridCell>
+          <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc4"/>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </af:form>
+  </af:document>
+</f:view>

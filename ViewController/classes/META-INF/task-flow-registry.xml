@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
-   <task-flow-descriptor path="META-INF/adfc-config.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="unspecified"/>
-   <task-flow-descriptor path="WEB-INF/taskflows/customerWizard_tf.xml" id="customerWizard_tf" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="true" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/taskflows/customer_tf.xml" id="customer_tf" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/taskflows/parameter_ts.xml" id="parameter_ts" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/taskflows/tf_header.xml" id="tf_header" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-</task-flow-registry>

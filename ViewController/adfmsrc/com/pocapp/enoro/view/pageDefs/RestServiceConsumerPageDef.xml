@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="RestServiceConsumerPageDef"
+                Package="com.pocapp.enoro.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="getCustomer_customerId" IsQueriable="false"/>
+    </variableIterator>
+    <methodIterator Binds="getCustomer.result" DataControl="EnoroExternalRestAPI" RangeSize="25"
+                    BeanClass="com.pocapp.enoro.model.EnoroExternalRestAPI.getCustomer_Data_CustomerResponse"
+                    id="getCustomerIterator"/>
+    <accessorIterator MasterBinding="getCustomerIterator" Binds="Address" RangeSize="25"
+                      DataControl="EnoroExternalRestAPI"
+                      BeanClass="com.pocapp.enoro.model.EnoroExternalRestAPI.getCustomer_Data_Address"
+                      id="AddressIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="getCustomer" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getCustomer"
+                  IsViewObjectMethod="false" DataControl="EnoroExternalRestAPI" InstanceName="data.EnoroExternalRestAPI"
+                  ReturnName="data.EnoroExternalRestAPI.methodResults.getCustomer_EnoroExternalRestAPI_getCustomer_result">
+      <NamedData NDName="customerId" NDType="java.lang.String" NDValue="${bindings.getCustomer_customerId}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="customerId">
+      <AttrNames>
+        <Item Value="getCustomer_customerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getCustomerIterator" id="BirthDate">
+      <AttrNames>
+        <Item Value="BirthDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getCustomerIterator" id="CustomerId">
+      <AttrNames>
+        <Item Value="CustomerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getCustomerIterator" id="CustomerType">
+      <AttrNames>
+        <Item Value="CustomerType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getCustomerIterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getCustomerIterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getCustomerIterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getCustomerIterator" id="MobileNumber">
+      <AttrNames>
+        <Item Value="MobileNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getCustomerIterator" id="PhoneNumber">
+      <AttrNames>
+        <Item Value="PhoneNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="AddressText">
+      <AttrNames>
+        <Item Value="AddressText"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="CoAddress">
+      <AttrNames>
+        <Item Value="CoAddress"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="CountryCode">
+      <AttrNames>
+        <Item Value="CountryCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="Entrance">
+      <AttrNames>
+        <Item Value="Entrance"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="Floor">
+      <AttrNames>
+        <Item Value="Floor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="HouseLetter">
+      <AttrNames>
+        <Item Value="HouseLetter"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="HouseNo">
+      <AttrNames>
+        <Item Value="HouseNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="IsEditable">
+      <AttrNames>
+        <Item Value="IsEditable"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="POBox">
+      <AttrNames>
+        <Item Value="POBox"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressIterator" id="Zipcode">
+      <AttrNames>
+        <Item Value="Zipcode"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

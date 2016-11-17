@@ -24,4 +24,21 @@
       </StringRefAddr>
     </RefAddresses>
   </Reference>
+  <Reference name="CustomerWebAPI" className="oracle.adf.model.connection.rest.RestConnection"
+             credentialStoreKey="CustomerWebAPI" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="CustomerWebAPI">
+        <Contents>
+          <restconnection name="CustomerWebAPI" url="http://dale-srvapp02:8080/CustomerWebAPI">
+            <authentication style="challenge">
+              <type>basic</type>
+            </authentication>
+          </restconnection>
+        </Contents>
+      </XmlRefAddr>
+      <SecureRefAddr addrType="password"/>
+      <SecureRefAddr addrType="username"/>
+    </RefAddresses>
+  </Reference>
 </References>

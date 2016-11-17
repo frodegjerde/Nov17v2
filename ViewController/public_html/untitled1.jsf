@@ -8,19 +8,36 @@
             >
         <af:form id="f1" >
             <af:pageTemplate viewId="/mainTemplate.jsf" id="pt1" >
-                <f:facet name="facetLeftNavigation" >
+                    <!--<f:facet name="facetLeftNavigation" >
                     <af:panelGroupLayout id="pgl3" layout="vertical" partialTriggers="r2">
                         <af:link text="#{viewcontrollerBundle['Untitled1.customer']}" action="#{viewScope.navigationBean.customer_tf}" id="l1"/>
                         <af:link text="Customer Wizard" action="#{viewScope.navigationBean.customerWizard_tf}"
                                  id="l2"/>
                         <af:link text="Parameter" action="#{viewScope.navigationBean.parameter_ts}" id="l3"/>
                     </af:panelGroupLayout>
-                </f:facet>
+                </f:facet>-->
+                
                 <f:facet name="facetCentral">
+                    <af:panelGroupLayout id="pgl1" layout="vertical" >                                   
+                        <af:panelSpringboard id="ps1" displayMode="grid"  childCreation="lazyUncached" >              
+                           <af:showDetailItem id="cwid" text="Customer Wizard"  icon="resources/images/newcustomer.png"  stretchChildren="first" flex="0">
+                             <!---     <af:region value="#{bindings.kscope1.regionModel}" id="r4"/> -->
+                                            <af:setPropertyListener from="cWizard" to="#{viewScope.navigationBean.currentDisclosedTF}" type="disclosure"/>
+                            </af:showDetailItem>
+                            <af:showDetailItem id="cid" text="Customers" icon="resources/images/customers.png" stretchChildren="first" flex="0">
+                            <!---      <af:region value="#{bindings.HV_Browsing1.regionModel}" id="r1"/> -->
+                             <af:setPropertyListener from="customers" to="#{viewScope.navigationBean.currentDisclosedTF}" type="disclosure"/>
+                            </af:showDetailItem>
+                            <af:showDetailItem id="pid" text="Parameters"  icon="resources/images/parameters.png" stretchChildren="first" flex="0">
+                            <!---      <af:region value="#{bindings.Charts1.regionModel}" id="r3"/> -->
+                            <af:setPropertyListener from="params" to="#{viewScope.navigationBean.currentDisclosedTF}" type="disclosure"/>
+                            </af:showDetailItem>        
+                        </af:panelSpringboard>                          
+                   </af:panelGroupLayout>
                     <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"
-                               partialTriggers="::l1 ::l2 ::l3 ::r2"/>
+                               partialTriggers="::ps1"/>
                 </f:facet>
-                <f:facet name="facetRightContextualActions"/>
+                <!--<f:facet name="facetRightContextualActions"/>-->
                 <f:facet name="facetHeader">
                     <af:region value="#{bindings.tf_header1.regionModel}" id="r2"/>
                 </f:facet>

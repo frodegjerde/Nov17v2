@@ -40,4 +40,8 @@
       <Attr Name="_VL" Value="true"/>
     </DesignTime>
   </Containee>
+  <Containee
+    Name="EnoroExternalRestAPI"
+    PackageName="com.pocapp.enoro.model.EnoroExternalRestAPI"
+    ObjectType="JboPackage"/>
 </JboProject>
