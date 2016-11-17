@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="ProductsPageDef"
+                Package="fragments.tf_customerwizard">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VProductView2" RangeSize="25" DataControl="AppModuleDataControl" id="VProductView2Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="VProductView2Iterator" id="VProductView2">
+      <nodeDefinition DefName="com.pocapp.enoro.model.am1.vo.VProductView" Name="VProductView20">
+        <AttrNames>
+          <Item Value="Productnr"/>
+          <Item Value="Productid"/>
+          <Item Value="Productgrpnr"/>
+          <Item Value="Productname"/>
+          <Item Value="Contracttypeno"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

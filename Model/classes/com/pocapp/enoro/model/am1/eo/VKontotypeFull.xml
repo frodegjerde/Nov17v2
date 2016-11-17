@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VKontotypeFull"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="V_KONTOTYPE_FULL"
+  AliasName="VKontotypeFull"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Kontotype"
+    IsNotNull="true"
+    Precision="3"
+    Scale="0"
+    ColumnName="KONTOTYPE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="V_KONTOTYPE_FULL"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Kontotypenavn"
+    Precision="4000"
+    ColumnName="KONTOTYPENAVN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="V_KONTOTYPE_FULL">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="PkVKontotypeFull"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_V_KONTOTYPE_FULL"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.am1.eo.VKontotypeFull.Kontotype"/>
+    </AttrArray>
+  </Key>
+</Entity>

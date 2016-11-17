@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CJurpersonJurtypeLink"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  EntityAssociation="com.pocapp.enoro.model.am1.eo.CJurpersonJurtypeAssoc">
+  <ViewLinkDefEnd
+    Name="VJurtypeView"
+    Cardinality="1"
+    Source="true"
+    Owner="com.pocapp.enoro.model.am1.vo.VJurtypeView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="VJurtypeView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.am1.vo.VJurtypeView.Jurtype"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="VJurpersonView"
+    Cardinality="-1"
+    Owner="com.pocapp.enoro.model.am1.vo.VJurpersonView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="VJurpersonView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.pocapp.enoro.model.am1.vo.VJurpersonView.Jurtype"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
