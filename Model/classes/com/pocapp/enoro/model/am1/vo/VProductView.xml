@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VProductView"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="VProduct"
+    Entity="com.pocapp.enoro.model.am1.eo.VProduct"/>
+  <ViewAttribute
+    Name="Productnr"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Productnr"
+    EntityUsage="VProduct"
+    AliasName="PRODUCTNR"/>
+  <ViewAttribute
+    Name="Productid"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Productid"
+    EntityUsage="VProduct"
+    AliasName="PRODUCTID"/>
+  <ViewAttribute
+    Name="Productgrpnr"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Productgrpnr"
+    EntityUsage="VProduct"
+    AliasName="PRODUCTGRPNR"/>
+  <ViewAttribute
+    Name="Productname"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Productname"
+    EntityUsage="VProduct"
+    AliasName="PRODUCTNAME"/>
+  <ViewAttribute
+    Name="Contracttypeno"
+    PrecisionRule="true"
+    EntityAttrName="Contracttypeno"
+    EntityUsage="VProduct"
+    AliasName="CONTRACTTYPENO"/>
+</ViewObject>

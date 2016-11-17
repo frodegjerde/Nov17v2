@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.16.48" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.pocapp.enoro.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/untitled1.jsf" usageId="com_pocapp_enoro_view_untitled1PageDef"/>
+    <page path="/fragments/tf_customer/customer.jsff" usageId="com_pocapp_enoro_view_customerPageDef"/>
+    <page path="/fragments/tf_customerwizard/initial.jsff" usageId="com_pocapp_enoro_view_initialPageDef"/>
+    <page path="/fragments/tf_customerwizard/address.jsff" usageId="com_pocapp_enoro_view_addressPageDef"/>
+    <page path="/fragments/tf_customerwizard/review.jsff" usageId="com_pocapp_enoro_view_reviewPageDef"/>
+    <page path="/fragments/tf_customerwizard/Products.jsff" usageId="com_pocapp_enoro_view_ProductsPageDef"/>
+    <page path="/fragments/tf_parameter/tf_parameter.jsff" usageId="com_pocapp_enoro_view_tf_parameterPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_pocapp_enoro_view_untitled1PageDef" path="com.pocapp.enoro.view.pageDefs.untitled1PageDef"/>
+    <page id="com_pocapp_enoro_view_customerPageDef" path="fragments.tf_customer.customerPageDef"/>
+    <page id="com_pocapp_enoro_view_initialPageDef" path="fragments.tf_customerwizard.initialPageDef"/>
+    <page id="com_pocapp_enoro_view_addressPageDef" path="fragments.tf_customerwizard.addressPageDef"/>
+    <page id="com_pocapp_enoro_view_reviewPageDef" path="fragments.tf_customerwizard.reviewPageDef"/>
+    <page id="com_pocapp_enoro_view_ProductsPageDef" path="fragments.tf_customerwizard.ProductsPageDef"/>
+    <page id="com_pocapp_enoro_view_tf_parameterPageDef" path="fragments.tf_parameter.tf_parameterPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.pocapp.enoro.model.am1"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
