@@ -69,16 +69,24 @@
       <string v="oracle.adfdtinternal.model.ide.settings.ADFMSettings/adfmContentSet"/>
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
+   <value n="DCProject" v="true"/>
    <value n="defaultPackage" v="com.pocapp.enoro.model"/>
    <value n="jbo.JpxName" v="com.pocapp.enoro.model.Model"/>
    <value n="jbo.NoAttrEnumClasses" v="true"/>
    <value n="JboProject" v="true"/>
+   <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
+      <value n="hasDataControls" v="true"/>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADFbc"/>
          <string v="ADFm"/>
          <string v="Java"/>
+         <string v="WSDL"/>
+         <string v="WSPolicy"/>
+         <string v="WebServices"/>
          <string v="XML"/>
+         <string v="XML_SCHEMA"/>
       </list>
    </hash>
    <value n="oracle.jbo.SavedPreferences" v="true"/>
@@ -289,6 +297,10 @@
             <value n="id" v="ADF Common Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="ADF Model Generic Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -325,6 +337,10 @@
          </hash>
          <hash>
             <value n="id" v="ADF Common Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Generic Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

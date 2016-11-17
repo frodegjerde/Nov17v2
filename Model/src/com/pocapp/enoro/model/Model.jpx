@@ -41,11 +41,7 @@
     </DesignTime>
   </Containee>
   <Containee
-    Name="eo"
-    PackageName="com.pocapp.enoro.model.eo"
-    ObjectType="JboPackage"/>
-  <Containee
-    Name="viewlinks"
-    PackageName="com.pocapp.enoro.model.vo.viewlinks"
+    Name="EnoroExternalRestAPI"
+    PackageName="com.pocapp.enoro.model.EnoroExternalRestAPI"
     ObjectType="JboPackage"/>
 </JboProject>

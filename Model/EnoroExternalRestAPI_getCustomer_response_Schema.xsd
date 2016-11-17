@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://schemas.datacontract.org/2004/07/Enoro.CustomerWebAPI.DTO"
+            targetNamespace="http://schemas.datacontract.org/2004/07/Enoro.CustomerWebAPI.DTO"
+            elementFormDefault="qualified">
+  <xsd:element name="CustomerResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Address">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AddressText" type="xsd:string"/>
+              <xsd:element name="City" type="xsd:string"/>
+              <xsd:element name="CoAddress" type="xsd:string"/>
+              <xsd:element name="CountryCode" type="xsd:string"/>
+              <xsd:element name="Entrance" type="xsd:string"/>
+              <xsd:element name="Floor" type="xsd:string"/>
+              <xsd:element name="HouseLetter" type="xsd:string"/>
+              <xsd:element name="HouseNo" type="xsd:string"/>
+              <xsd:element name="IsEditable" type="xsd:string"/>
+              <xsd:element name="POBox" type="xsd:integer"/>
+              <xsd:element name="Zipcode" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="BirthDate" type="xsd:dateTime"/>
+        <xsd:element name="CustomerId" type="xsd:integer"/>
+        <xsd:element name="CustomerType" type="xsd:string"/>
+        <xsd:element name="Email" type="xsd:string"/>
+        <xsd:element name="FirstName" type="xsd:string"/>
+        <xsd:element name="IsBroadbandCustomer" type="xsd:string"/>
+        <xsd:element name="IsDistrictHeatingCustomer" type="xsd:string"/>
+        <xsd:element name="IsNetCustomer" type="xsd:string"/>
+        <xsd:element name="IsPowerCustomer" type="xsd:string"/>
+        <xsd:element name="LastName" type="xsd:string"/>
+        <xsd:element name="MobileNumber" type="xsd:string"/>
+        <xsd:element name="OrganizationNo" type="xsd:string"/>
+        <xsd:element name="PhoneNumber" type="xsd:string"/>
+        <xsd:element name="Pin" type="xsd:string"/>
+        <xsd:element name="RequiresProfileConfirmation" type="xsd:string"/>
+        <xsd:element name="ResponseStatus">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="ErrorCode" type="xsd:string"/>
+              <xsd:element name="Message" type="xsd:string"/>
+              <xsd:element name="StackTrace" type="xsd:string"/>
+              <xsd:element name="Errors">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ResponseError">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="ErrorCode" type="xsd:string"/>
+                          <xsd:element name="FieldName" type="xsd:string"/>
+                          <xsd:element name="Message" type="xsd:string"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

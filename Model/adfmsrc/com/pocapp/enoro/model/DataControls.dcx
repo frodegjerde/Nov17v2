@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.0.31" id="DataControls"
+                    Package="com.pocapp.enoro.model">
+  <AdapterDataControl id="EnoroExternalRestAPI" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.rest.RestURLDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false"
+                      Definition="com.pocapp.enoro.model.EnoroExternalRestAPI"
+                      BeanClass="com.pocapp.enoro.model.EnoroExternalRestAPI"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <Definitions>
+        <Definition xmlns="http://xmlns.oracle.com/adfm/adapter/rest/xml" ConnectionName="CustomerWebAPI"
+                    Source="/customers/##customerId##" HttpMethod="GET" id="getCustomer" MethodRef="XSD"
+                    SchemaLocation="EnoroExternalRestAPI_getCustomer_response_Schema.xsd" ensureKeyAttribute="true"
+                    dcStructureVersion="2" RootElement="CustomerResponse">
+          <Parameters>
+            <Parameter Name="customerId" Value="1"/>
+          </Parameters>
+        </Definition>
+      </Definitions>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>
