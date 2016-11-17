@@ -4,6 +4,18 @@
   <af:panelAccordion discloseMany="false" id="pa1" discloseNone="true">
 
     <af:showDetailItem id="pane1" text="Installcode">
+      <af:toolbar id="t5">
+        <af:button actionListener="#{bindings.CreateInsert.execute}" text="Create new"
+                 disabled="#{!bindings.CreateInsert.enabled}" id="b1"/>
+        <af:button actionListener="#{bindings.Delete.execute}" text="Delete" disabled="#{!bindings.Delete.enabled}"
+                 id="b2"/>
+        <af:button actionListener="#{bindings.Commit.execute}" text="Commit" disabled="#{!bindings.Commit.enabled}"
+                 id="b4"/>    
+        <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                   disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b5">
+          <af:resetActionListener/>
+        </af:button>
+      </af:toolbar>
       <af:table value="#{bindings.VInstallcodeFullView1.collectionModel}" var="row"
                 rows="#{bindings.VInstallcodeFullView1.rangeSize}"
                 emptyText="#{bindings.VInstallcodeFullView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -11,7 +23,8 @@
                 selectionListener="#{bindings.VInstallcodeFullView1.collectionModel.makeCurrent}" rowSelection="single"
                 fetchSize="#{bindings.VInstallcodeFullView1.rangeSize}"
                 filterModel="#{bindings.VInstallcodeFullView1Query.queryDescriptor}" filterVisible="true"
-                queryListener="#{bindings.VInstallcodeFullView1Query.processQuery}" varStatus="vs" id="t4">
+                queryListener="#{bindings.VInstallcodeFullView1Query.processQuery}" varStatus="vs" id="t4"
+                editingMode="clickToEdit" partialTriggers="::cmi1 ::cmi2 ::cmi3 ::b1 ::l1 ::b2 ::b6">
         <af:column sortProperty="#{bindings.VInstallcodeFullView1.hints.Installcodeid.name}" filterable="true"
                    sortable="true" headerText="#{bindings.VInstallcodeFullView1.hints.Installcodeid.label}" id="c7">
           <af:inputText value="#{row.bindings.Installcodeid.inputValue}"
@@ -50,6 +63,19 @@
       </af:table>
     </af:showDetailItem>
     <af:showDetailItem id="pane2" text="Kontakttype">
+      <af:toolbar id="t6">
+        <af:button actionListener="#{bindings.CreateInsert1.execute}" text="Create new"
+                   disabled="#{!bindings.CreateInsert1.enabled}" id="b3"/>
+        <af:button actionListener="#{bindings.Delete1.execute}" text="Delete" disabled="#{!bindings.Delete1.enabled}"
+                   id="b6"/>
+        <af:button actionListener="#{bindings.Commit.execute}" text="Commit" disabled="#{!bindings.Commit.enabled}"
+                 id="b7"/>    
+        <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                   disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b8">
+          <af:resetActionListener/>
+        </af:button>
+      </af:toolbar>
+    
       <af:table value="#{bindings.VKontakttypeFullView1.collectionModel}" var="row"
                 rows="#{bindings.VKontakttypeFullView1.rangeSize}"
                 emptyText="#{bindings.VKontakttypeFullView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -57,7 +83,8 @@
                 selectionListener="#{bindings.VKontakttypeFullView1.collectionModel.makeCurrent}" rowSelection="single"
                 fetchSize="#{bindings.VKontakttypeFullView1.rangeSize}"
                 filterModel="#{bindings.VKontakttypeFullView1Query.queryDescriptor}" filterVisible="true"
-                queryListener="#{bindings.VKontakttypeFullView1Query.processQuery}" varStatus="vs" id="t3">
+                queryListener="#{bindings.VKontakttypeFullView1Query.processQuery}" varStatus="vs" id="t3"
+                partialTriggers="::b3 ::b6">
         <af:column sortProperty="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.name}" filterable="true"
                    sortable="true" headerText="#{bindings.VKontakttypeFullView1.hints.Kontakttypenr.label}" id="c5">
           <af:inputText value="#{row.bindings.Kontakttypenr.inputValue}"
@@ -85,6 +112,18 @@
       </af:table>
     </af:showDetailItem>
     <af:showDetailItem id="pane3" text="KontraktImportstatus">
+       <af:toolbar id="t7">
+        <af:button actionListener="#{bindings.CreateInsert2.execute}" text="Create new"
+                 disabled="#{!bindings.CreateInsert2.enabled}" id="b16"/>
+        <af:button actionListener="#{bindings.Delete2.execute}" text="Delete" disabled="#{!bindings.Delete2.enabled}"
+                 id="b15"/>
+        <af:button actionListener="#{bindings.Commit.execute}" text="Commit" disabled="#{!bindings.Commit.enabled}"
+                 id="b14"/>    
+        <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                   disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b13">
+          <af:resetActionListener/>
+        </af:button>
+      </af:toolbar>   
       <af:table value="#{bindings.VKontrimportstatusFullView1.collectionModel}" var="row"
                 rows="#{bindings.VKontrimportstatusFullView1.rangeSize}"
                 emptyText="#{bindings.VKontrimportstatusFullView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -93,7 +132,8 @@
                 selectionListener="#{bindings.VKontrimportstatusFullView1.collectionModel.makeCurrent}"
                 rowSelection="single" fetchSize="#{bindings.VKontrimportstatusFullView1.rangeSize}"
                 filterModel="#{bindings.VKontrimportstatusFullView1Query.queryDescriptor}" filterVisible="true"
-                queryListener="#{bindings.VKontrimportstatusFullView1Query.processQuery}" varStatus="vs" id="t1">
+                queryListener="#{bindings.VKontrimportstatusFullView1Query.processQuery}" varStatus="vs" id="t1"
+                partialTriggers="::cmi1 ::b15 ::b16">
         <af:column sortProperty="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.name}" filterable="true"
                    sortable="true" headerText="#{bindings.VKontrimportstatusFullView1.hints.Importstatusnr.label}"
                    id="c1">
@@ -123,6 +163,18 @@
       </af:table>
     </af:showDetailItem>    
     <af:showDetailItem id="pane4" text="Kontotype">
+       <af:toolbar id="t8">
+        <af:button actionListener="#{bindings.CreateInsert3.execute}" text="Create new"
+                 disabled="#{!bindings.CreateInsert3.enabled}" id="b12"/>
+        <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" disabled="#{!bindings.Delete3.enabled}"
+                 id="b11"/>
+        <af:button actionListener="#{bindings.Commit.execute}" text="Commit" disabled="#{!bindings.Commit.enabled}"
+                 id="b10"/>    
+        <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                   disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b9">
+          <af:resetActionListener/>
+        </af:button>
+      </af:toolbar>       
       <af:table value="#{bindings.VKontotypeFullView1.collectionModel}" var="row"
                 rows="#{bindings.VKontotypeFullView1.rangeSize}"
                 emptyText="#{bindings.VKontotypeFullView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -130,7 +182,8 @@
                 selectionListener="#{bindings.VKontotypeFullView1.collectionModel.makeCurrent}" rowSelection="single"
                 fetchSize="#{bindings.VKontotypeFullView1.rangeSize}"
                 filterModel="#{bindings.VKontotypeFullView1Query.queryDescriptor}" filterVisible="true"
-                queryListener="#{bindings.VKontotypeFullView1Query.processQuery}" varStatus="vs" id="t2">
+                queryListener="#{bindings.VKontotypeFullView1Query.processQuery}" varStatus="vs" id="t2"
+                partialTriggers="::b11 ::b12">
         <af:column sortProperty="#{bindings.VKontotypeFullView1.hints.Kontotype.name}" filterable="true" sortable="true"
                    headerText="#{bindings.VKontotypeFullView1.hints.Kontotype.label}" id="c3">
           <af:inputText value="#{row.bindings.Kontotype.inputValue}"
