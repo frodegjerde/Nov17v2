@@ -6,40 +6,42 @@
       <af:panelSplitter id="ps2" splitterPosition="159" orientation="vertical">
         <f:facet name="first">
           <af:panelFormLayout id="pfl1" rows="3">
-            <af:panelLabelAndMessage label="Customer No" id="plam1">
-              <af:outputText value="#{bindings.Jurpersonid.inputValue}"
-                             shortDesc="#{bindings.Jurpersonid.hints.tooltip}" id="ot1">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.Jurpersonid.format}"/>
-              </af:outputText>
-            </af:panelLabelAndMessage>
-            <af:inputText value="#{bindings.Fornamn.inputValue}" label="First name"
+            <af:inputText value="#{bindings.Jurpersonid.inputValue}" label="#{bindings.Jurpersonid.hints.label}"
+                          required="#{bindings.Jurpersonid.hints.mandatory}"
+                          columns="#{bindings.Jurpersonid.hints.displayWidth}"
+                          maximumLength="#{bindings.Jurpersonid.hints.precision}"
+                          shortDesc="#{bindings.Jurpersonid.hints.tooltip}" id="it1">
+              <f:validator binding="#{bindings.Jurpersonid.validator}"/>
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.Jurpersonid.format}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.Fornamn.inputValue}" label="#{bindings.Fornamn.hints.label}"
                           required="#{bindings.Fornamn.hints.mandatory}"
                           columns="#{bindings.Fornamn.hints.displayWidth}"
                           maximumLength="#{bindings.Fornamn.hints.precision}"
                           shortDesc="#{bindings.Fornamn.hints.tooltip}" id="it2">
               <f:validator binding="#{bindings.Fornamn.validator}"/>
             </af:inputText>
-            <af:inputDate value="#{bindings.Foodseldato.inputValue}" label="Birthdate"
+            <af:inputDate value="#{bindings.Foodseldato.inputValue}" label="#{bindings.Foodseldato.hints.label}"
                           required="#{bindings.Foodseldato.hints.mandatory}"
                           columns="#{bindings.Foodseldato.hints.displayWidth}"
                           shortDesc="#{bindings.Foodseldato.hints.tooltip}" id="id1">
               <f:validator binding="#{bindings.Foodseldato.validator}"/>
               <af:convertDateTime pattern="#{bindings.Foodseldato.format}"/>
             </af:inputDate>
-            <af:selectOneChoice value="#{bindings.Jurtype1.inputValue}" label="Type"
-                                required="#{bindings.Jurtype1.hints.mandatory}"
-                                shortDesc="#{bindings.Jurtype1.hints.tooltip}" id="soc3">
-              <f:selectItems value="#{bindings.Jurtype1.items}" id="si3"/>
-              <f:validator binding="#{bindings.Jurtype1.validator}"/>
+            <af:selectOneChoice value="#{bindings.Jurtype.inputValue}" label="#{bindings.Jurtype.label}"
+                                required="#{bindings.Jurtype.hints.mandatory}"
+                                shortDesc="#{bindings.Jurtype.hints.tooltip}" id="soc3">
+              <f:selectItems value="#{bindings.Jurtype.items}" id="si3"/>
+              <f:validator binding="#{bindings.Jurtype.validator}"/>
             </af:selectOneChoice>
-            <af:inputText value="#{bindings.Etternamn.inputValue}" label="Last name"
+            <af:inputText value="#{bindings.Etternamn.inputValue}" label="#{bindings.Etternamn.hints.label}"
                           required="#{bindings.Etternamn.hints.mandatory}"
                           columns="#{bindings.Etternamn.hints.displayWidth}"
                           maximumLength="#{bindings.Etternamn.hints.precision}"
                           shortDesc="#{bindings.Etternamn.hints.tooltip}" id="it3">
               <f:validator binding="#{bindings.Etternamn.validator}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.Foretaksnr.inputValue}" label="Org. No"
+            <af:inputText value="#{bindings.Foretaksnr.inputValue}" label="#{bindings.Foretaksnr.hints.label}"
                           required="#{bindings.Foretaksnr.hints.mandatory}"
                           columns="#{bindings.Foretaksnr.hints.displayWidth}"
                           maximumLength="#{bindings.Foretaksnr.hints.precision}"
@@ -57,7 +59,7 @@
                              partialSubmit="true" id="b3"/>
                   <af:button actionListener="#{bindings.Last.execute}" text="Last" disabled="#{!bindings.Last.enabled}"
                              partialSubmit="true" id="b4"/>
-                  <af:spacer width="40" height="10" id="s1"/>
+                  <af:spacer width="50" height="10" id="s1"/>
                   <af:button text="Submit" id="b5"/>
                 </af:panelGroupLayout>
               </af:panelGroupLayout>

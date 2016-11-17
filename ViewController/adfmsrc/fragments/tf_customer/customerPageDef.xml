@@ -4,7 +4,6 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="VJurpersonView1" RangeSize="25" DataControl="AppModuleDataControl" id="VJurpersonView1Iterator"/>
     <iterator Binds="VJurpersonAdresseView2" RangeSize="25" DataControl="AppModuleDataControl"
               id="VJurpersonAdresseView2Iterator"/>
     <iterator Binds="VJurpersonFinancialView2" RangeSize="25" DataControl="AppModuleDataControl"
@@ -23,37 +22,9 @@
               id="VJurpersonConsumptionView2Iterator"/>
     <iterator Binds="VJurpersonKontraktCntView2" RangeSize="25" DataControl="AppModuleDataControl"
               id="VJurpersonKontraktCntView2Iterator"/>
+    <iterator Binds="VJurpersonView1" RangeSize="25" DataControl="AppModuleDataControl" id="VJurpersonView1Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="VJurpersonView1Iterator" id="Jurpersonid">
-      <AttrNames>
-        <Item Value="Jurpersonid"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="VJurpersonView1Iterator" id="Fornamn">
-      <AttrNames>
-        <Item Value="Fornamn"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="VJurpersonView1Iterator" id="Etternamn">
-      <AttrNames>
-        <Item Value="Etternamn"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="VJurpersonView1Iterator" id="Foodseldato">
-      <AttrNames>
-        <Item Value="Foodseldato"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="VJurpersonView1Iterator" id="Foretaksnr">
-      <AttrNames>
-        <Item Value="Foretaksnr"/>
-      </AttrNames>
-    </attributeValues>
-    <action IterBinding="VJurpersonView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
-    <action IterBinding="VJurpersonView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
-    <action IterBinding="VJurpersonView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
-    <action IterBinding="VJurpersonView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
     <attributeValues IterBinding="VJurpersonAdresseView2Iterator" id="Adresse">
       <AttrNames>
         <Item Value="Adresse"/>
@@ -165,7 +136,36 @@
         <Item Value="Fjernvarme"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="VJurpersonView1Iterator" StaticList="false" Uses="LOV_Jurtype" id="Jurtype1"
-          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="VJurpersonView1Iterator" id="Jurpersonid">
+      <AttrNames>
+        <Item Value="Jurpersonid"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="VJurpersonView1Iterator" StaticList="false" Uses="LOV_Jurtype" id="Jurtype"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="VJurpersonView1Iterator" id="Fornamn">
+      <AttrNames>
+        <Item Value="Fornamn"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VJurpersonView1Iterator" id="Etternamn">
+      <AttrNames>
+        <Item Value="Etternamn"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VJurpersonView1Iterator" id="Foodseldato">
+      <AttrNames>
+        <Item Value="Foodseldato"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VJurpersonView1Iterator" id="Foretaksnr">
+      <AttrNames>
+        <Item Value="Foretaksnr"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="VJurpersonView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="VJurpersonView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="VJurpersonView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="VJurpersonView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>
