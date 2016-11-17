@@ -238,92 +238,95 @@
     <f:facet name="second">
       <af:panelTabbed position="above" id="pt1">
         <af:showDetailItem id="tab1" text="Contract">
-          <af:button text="Excel" id="b9">
-            <af:exportCollectionActionListener type="excelHTML" exportedId="t2" filename="exp_contracts.xls"
-                                               title="Customer contracts"/>
-          </af:button>
-          <af:table value="#{bindings.VKontraktView3.collectionModel}" var="row"
-                    rows="#{bindings.VKontraktView3.rangeSize}"
-                    emptyText="#{bindings.VKontraktView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                    rowBandingInterval="0" selectedRowKeys="#{bindings.VKontraktView3.collectionModel.selectedRow}"
-                    selectionListener="#{bindings.VKontraktView3.collectionModel.makeCurrent}" rowSelection="single"
-                    fetchSize="#{bindings.VKontraktView3.rangeSize}"
-                    filterModel="#{bindings.VKontraktView3Query.queryDescriptor}" filterVisible="true"
-                    queryListener="#{bindings.VKontraktView3Query.processQuery}" varStatus="vs" id="t2">
-            <af:column sortProperty="#{bindings.VKontraktView3.hints.Kontraktnr.name}" filterable="true" sortable="true"
-                       headerText="Contract No" id="c4" width="84">
-              <af:outputText value="#{row.Kontraktnr}" shortDesc="#{bindings.VKontraktView3.hints.Kontraktnr.tooltip}"
-                             id="ot5">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView3.hints.Kontraktnr.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.VKontraktView3.hints.Maalepktnr.name}" filterable="true" sortable="true"
-                       headerText="Meteringpoint No" id="c5" width="112">
-              <af:outputText value="#{row.Maalepktnr}" shortDesc="#{bindings.VKontraktView3.hints.Maalepktnr.tooltip}"
-                             id="ot6">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView3.hints.Maalepktnr.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.VKontraktView3.hints.Resknr.name}" filterable="true" sortable="true"
-                       headerText="Ledger No" id="c6" width="80">
-              <af:outputText value="#{row.Resknr}" shortDesc="#{bindings.VKontraktView3.hints.Resknr.tooltip}" id="ot7">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView3.hints.Resknr.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.VKontraktView3.hints.Valstatus.name}" filterable="true" sortable="true"
-                       headerText="Status" id="c7" width="73">              
-              <af:selectOneChoice value="#{row.bindings.Valstatus.inputValue}" label="#{row.bindings.Valstatus.label}"
-                                  required="#{bindings.VKontraktView3.hints.Valstatus.mandatory}"
-                                  shortDesc="#{bindings.VKontraktView3.hints.Valstatus.tooltip}" id="soc2"
-                                  readOnly="true">
-                <f:selectItems value="#{row.bindings.Valstatus.items}" id="si2"/>
-                <f:validator binding="#{row.bindings.Valstatus.validator}"/>
-              </af:selectOneChoice>
-            </af:column>
-            <af:column sortProperty="#{bindings.VKontraktView3.hints.Kontrgrnr.name}" filterable="true" sortable="true"
-                       headerText="Contract Group" id="c8" width="113">
-              <af:selectOneChoice value="#{row.bindings.Kontrgrnr.inputValue}" label="#{row.bindings.Kontrgrnr.label}"
-                                  required="#{bindings.VKontraktView3.hints.Kontrgrnr.mandatory}"
-                                  shortDesc="#{bindings.VKontraktView3.hints.Kontrgrnr.tooltip}" readOnly="true"
-                                  id="soc1">
-                <f:selectItems value="#{row.bindings.Kontrgrnr.items}" id="si1"/>
-                <f:validator binding="#{row.bindings.Kontrgrnr.validator}"/>
-              </af:selectOneChoice>
-            </af:column>
-            <af:column sortProperty="#{bindings.VKontraktView3.hints.Avrpuljenr.name}" filterable="true" sortable="true"
-                       headerText="Billing Group No" id="c9" width="138">
-              <af:outputText value="#{row.Avrpuljenr}" shortDesc="#{bindings.VKontraktView3.hints.Avrpuljenr.tooltip}"
-                             id="ot10">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView3.hints.Avrpuljenr.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.VKontraktView3.hints.Kontrretur.name}" filterable="true" sortable="true"
-                       headerText="Start Date" id="c10">
-              <f:facet name="filter">
-                <af:inputDate value="#{bindings.VKontraktView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Kontrretur.value}"
-                              id="id3">
-                  <af:convertDateTime pattern="#{bindings.VKontraktView3.hints.Kontrretur.format}"/>
-                </af:inputDate>
-              </f:facet>
-              <af:outputText value="#{row.Kontrretur}" shortDesc="#{bindings.VKontraktView3.hints.Kontrretur.tooltip}"
-                             id="ot11">
-                <af:convertDateTime pattern="#{bindings.VKontraktView3.hints.Kontrretur.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.VKontraktView3.hints.Kontroppseiingdato.name}" filterable="true"
-                       sortable="true" headerText="End Date" id="c11">
-              <f:facet name="filter">
-                <af:inputDate value="#{bindings.VKontraktView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Kontroppseiingdato.value}"
-                              id="id4">
-                  <af:convertDateTime pattern="#{bindings.VKontraktView3.hints.Kontroppseiingdato.format}"/>
-                </af:inputDate>
-              </f:facet>
-              <af:outputText value="#{row.Kontroppseiingdato}"
-                             shortDesc="#{bindings.VKontraktView3.hints.Kontroppseiingdato.tooltip}" id="ot12">
-                <af:convertDateTime pattern="#{bindings.VKontraktView3.hints.Kontroppseiingdato.format}"/>
-              </af:outputText>
-            </af:column>
-          </af:table>
+          <af:panelCollection id="pc1" inlineStyle="width:663px; height:174px;">
+            <f:facet name="menus"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="statusbar"/>
+            <af:table value="#{bindings.VKontraktView31.collectionModel}" var="row"
+                      rows="#{bindings.VKontraktView31.rangeSize}"
+                      emptyText="#{bindings.VKontraktView31.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.VKontraktView31.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.VKontraktView31.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.VKontraktView31.rangeSize}"
+                      filterModel="#{bindings.VKontraktView3Query.queryDescriptor}" filterVisible="true"
+                      queryListener="#{bindings.VKontraktView3Query.processQuery}" varStatus="vs" id="t4">
+              <af:column sortProperty="#{bindings.VKontraktView31.hints.Kontraktnr.name}" filterable="true"
+                         sortable="true" headerText="#{bindings.VKontraktView31.hints.Kontraktnr.label}" id="c15">
+                <af:outputText value="#{row.Kontraktnr}"
+                               shortDesc="#{bindings.VKontraktView31.hints.Kontraktnr.tooltip}" id="ot1">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView31.hints.Kontraktnr.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.VKontraktView31.hints.Maalepktnr.name}" filterable="true"
+                         sortable="true" headerText="#{bindings.VKontraktView31.hints.Maalepktnr.label}" id="c16">
+                <af:outputText value="#{row.Maalepktnr}"
+                               shortDesc="#{bindings.VKontraktView31.hints.Maalepktnr.tooltip}" id="ot8">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView31.hints.Maalepktnr.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.VKontraktView31.hints.Resknr.name}" filterable="true" sortable="true"
+                         headerText="#{bindings.VKontraktView31.hints.Resknr.label}" id="c17">
+                <af:outputText value="#{row.Resknr}" shortDesc="#{bindings.VKontraktView31.hints.Resknr.tooltip}"
+                               id="ot9">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView31.hints.Resknr.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.VKontraktView31.hints.Valstatus.name}" filterable="true"
+                         sortable="true" headerText="#{bindings.VKontraktView31.hints.Valstatus.label}" id="c18">
+                <af:selectOneChoice value="#{row.bindings.Valstatus.inputValue}" label="#{row.bindings.Valstatus.label}"
+                                    required="#{bindings.VKontraktView31.hints.Valstatus.mandatory}"
+                                    shortDesc="#{bindings.VKontraktView31.hints.Valstatus.tooltip}" readOnly="true"
+                                    id="soc4">
+                  <f:selectItems value="#{row.bindings.Valstatus.items}" id="si4"/>
+                  <f:validator binding="#{row.bindings.Valstatus.validator}"/>
+                </af:selectOneChoice>
+              </af:column>
+              <af:column sortProperty="#{bindings.VKontraktView31.hints.Kontrgrnr.name}" filterable="true"
+                         sortable="true" headerText="#{bindings.VKontraktView31.hints.Kontrgrnr.label}" id="c19">
+                <af:selectOneChoice value="#{row.bindings.Kontrgrnr.inputValue}" label="#{row.bindings.Kontrgrnr.label}"
+                                    required="#{bindings.VKontraktView31.hints.Kontrgrnr.mandatory}"
+                                    shortDesc="#{bindings.VKontraktView31.hints.Kontrgrnr.tooltip}" readOnly="true"
+                                    id="soc5">
+                  <f:selectItems value="#{row.bindings.Kontrgrnr.items}" id="si5"/>
+                  <f:validator binding="#{row.bindings.Kontrgrnr.validator}"/>
+                </af:selectOneChoice>
+              </af:column>
+              <af:column sortProperty="#{bindings.VKontraktView31.hints.Avrpuljenr.name}" filterable="true"
+                         sortable="true" headerText="#{bindings.VKontraktView31.hints.Avrpuljenr.label}" id="c20">
+                <af:outputText value="#{row.Avrpuljenr}"
+                               shortDesc="#{bindings.VKontraktView31.hints.Avrpuljenr.tooltip}" id="ot20">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.VKontraktView31.hints.Avrpuljenr.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.VKontraktView31.hints.Kontrretur.name}" filterable="true"
+                         sortable="true" headerText="#{bindings.VKontraktView31.hints.Kontrretur.label}" id="c21">
+                <f:facet name="filter">
+                  <af:inputDate value="#{bindings.VKontraktView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Kontrretur.value}"
+                                id="id5">
+                    <af:convertDateTime pattern="#{bindings.VKontraktView31.hints.Kontrretur.format}"/>
+                  </af:inputDate>
+                </f:facet>
+                <af:outputText value="#{row.Kontrretur}"
+                               shortDesc="#{bindings.VKontraktView31.hints.Kontrretur.tooltip}" id="ot21">
+                  <af:convertDateTime pattern="#{bindings.VKontraktView31.hints.Kontrretur.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.VKontraktView31.hints.Kontroppseiingdato.name}" filterable="true"
+                         sortable="true" headerText="#{bindings.VKontraktView31.hints.Kontroppseiingdato.label}"
+                         id="c22">
+                <f:facet name="filter">
+                  <af:inputDate value="#{bindings.VKontraktView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Kontroppseiingdato.value}"
+                                id="id6">
+                    <af:convertDateTime pattern="#{bindings.VKontraktView31.hints.Kontroppseiingdato.format}"/>
+                  </af:inputDate>
+                </f:facet>
+                <af:outputText value="#{row.Kontroppseiingdato}"
+                               shortDesc="#{bindings.VKontraktView31.hints.Kontroppseiingdato.tooltip}" id="ot22">
+                  <af:convertDateTime pattern="#{bindings.VKontraktView31.hints.Kontroppseiingdato.format}"/>
+                </af:outputText>
+              </af:column>
+            </af:table>
+          </af:panelCollection>
         </af:showDetailItem>
         <af:showDetailItem id="tab2" text="Ledger">
           <af:table value="#{bindings.VReskontroView2.collectionModel}" var="row"

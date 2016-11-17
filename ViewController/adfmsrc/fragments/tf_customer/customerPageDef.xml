@@ -84,20 +84,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="VKontraktView3Iterator" id="VKontraktView3">
-      <nodeDefinition DefName="com.pocapp.enoro.model.am1.vo.VKontraktView" Name="VKontraktView30">
-        <AttrNames>
-          <Item Value="Kontraktnr"/>
-          <Item Value="Maalepktnr"/>
-          <Item Value="Resknr"/>
-          <Item Value="Valstatus"/>
-          <Item Value="Kontrgrnr"/>
-          <Item Value="Avrpuljenr"/>
-          <Item Value="Kontrretur"/>
-          <Item Value="Kontroppseiingdato"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="VReskontroView2Iterator" id="VReskontroView2">
       <nodeDefinition DefName="com.pocapp.enoro.model.am1.vo.VReskontroView" Name="VReskontroView20">
         <AttrNames>
@@ -167,5 +153,19 @@
     <action IterBinding="VJurpersonView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
     <action IterBinding="VJurpersonView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="VJurpersonView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <tree IterBinding="VKontraktView3Iterator" id="VKontraktView31">
+      <nodeDefinition DefName="com.pocapp.enoro.model.am1.vo.VKontraktView" Name="VKontraktView310">
+        <AttrNames>
+          <Item Value="Kontraktnr"/>
+          <Item Value="Maalepktnr"/>
+          <Item Value="Resknr"/>
+          <Item Value="Valstatus"/>
+          <Item Value="Kontrgrnr"/>
+          <Item Value="Avrpuljenr"/>
+          <Item Value="Kontrretur"/>
+          <Item Value="Kontroppseiingdato"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

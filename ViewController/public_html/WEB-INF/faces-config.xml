@@ -11,5 +11,9 @@
       <base-name>com.pocapp.enoro.view.resources.tf_customerWizardBundle</base-name>
       <var>tf_cw_b</var>
     </resource-bundle>
+    <resource-bundle>
+      <base-name>com.pocapp.enoro.view.resources.tf_cusomerBundle.properties</base-name>
+      <var>tf_c_b</var>
+    </resource-bundle>
   </application>
 </faces-config>
